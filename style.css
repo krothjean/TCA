@@ -1,0 +1,29 @@
+.cabecalho{
+  text-align: center;
+  background-color: green;
+  padding: 0px;
+
+}
+body{
+    margin: 0;
+}
+.barra_navegacao{
+    overflow: hidden;
+    background-color: rgb(197, 192, 192);
+}
+.barra_navegacao a{
+    float: left;
+  display: block;
+  color: #15affc;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.barra_navegacao a:hover{
+    background-color:rgb(241, 236, 236);
+    color: green;
+
+}
+button{
+  background-color: rgb(197, 186, 186);
+}
