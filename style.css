@@ -110,6 +110,7 @@ body{
   width: 70%;
   height: 50px;
   margin-left: 0px;
+  border-radius: 5px;
 }
 .button_banana:hover{
   background-color: rgb(16, 78, 16);
@@ -118,8 +119,14 @@ body{
 .titulo_fruteira{
   color: rgb(45, 165, 45);
   text-shadow: 2px 2px 4px #000000;
+  position: absolute;
+  left: 400px;
 }
 .titulo_acougue{
   color: rgb(189, 7, 7);
+  text-shadow: 2px 2px 4px #000000;
+}
+.titulo_padaria{
+  color:rgb(225, 166, 16);
   text-shadow: 2px 2px 4px #000000;
 }
