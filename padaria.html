@@ -39,6 +39,9 @@
   background-color:rgb(225, 166, 16) ;
   height: 80px;
 }
+.procura_padaria{
+
+}
 </style>
 <body>
     <header>
@@ -47,7 +50,22 @@
         <h1 class="titulo_padaria">Padaria</h1>
        
         <div class="barra_pesquisa">    
-        <input type="text" placeholder="Search..">
+        <!--<input type="text" placeholder="Search..">//-->
+        <input class="procura_padaria" type="text">
+        <ul>
+        <li>Cacetinho</li>
+        <li>Pão Caseiro de Milho</li>
+        <li>Pão de Forma sem Glúten</li>
+        <li>Pão Integral 12 Grãos Pullman</li>
+        <li>Achocolatado em Pó Nescau</li>
+        <li>Leite em pó Ninho Integral</li>
+        <li>Cereal Matinal Crunch</li>
+        <li>Cereal Matinal Nescau</li>
+        <li>Leite Integral Italac</li>
+        <li>Nata Santa Clara</li>
+        <li>Manteiga Extra com Sal President</li>
+        <li>Torrada Tradicional Bauducco</li>
+        </ul>
         </div>
         <img class="carrinho_padaria" src="carrinho de compras.png">
           </div>
@@ -63,7 +81,7 @@
               <img src="cacetinho.jpg" width="100%" height="150">
               <p>Pão Cacetinho R$ 10,00 Kg </p>
               <br>
-              <button onclick="Comprar()" class="button_banana">Comprar</button>
+              <button onclick="Comprar()" class="button_banana">Adicionar</button>
         
           </div>
           <div class="caixa_texto">
@@ -71,80 +89,81 @@
               <br>
               <p>Pão caseiro de Milho Panco 500g R$ 7,90</p>
               <br>
-              <button onclick="Comprar()" class="button_banana">Comprar</button>
+              <button onclick="Comprar()" class="button_banana">Adicionar</button>
           </div>
           <div class="caixa_texto">
             <img src="pão de forma sem Gluten.webp" width="80%" height="150">
             <br>
             <p>Pão de Forma Wickbold Sem Glúten 300g R$ 22,00 </p>
             <br>
-            <button onclick="Comprar()" class="button_banana">Comprar</button>
+            <button onclick="Comprar()" class="button_banana">Adicionar</button>
           </div>
           <div class="caixa_texto">
             <img src="pão integral 12 grãos Pullmann.jpg" width="115%" height="150">
             <br>
-            <p>Pão integral 12 grãos Pullmann 450g R$ 15,89</p>
+            <p>Pão integral 12 grãos Pullman 450g R$ 15,89</p>
             <br>
-            <button onclick="Comprar()" class="button_banana">Comprar</button>
+            <button onclick="Comprar()" class="button_banana">Adicionar</button>
           </div>
           <div class="caixa_texto">
             <img src="Achocolatado-em-Po-2.0-370g-Nescau-105744.png" width="90%" height="150">
             <br>
             <p>Achocolatado em Pó Nescau 370g R$ 10,90</p>
             <br>
-            <button onclick="Comprar()" class="button_banana">Comprar</button>
+            <button onclick="Comprar()" class="button_banana">Adicionar</button>
           </div>
           <div class="caixa_texto">
             <img src="leite em pó ninho integral 380g.jpg" width="80%" height="150">
             <br>
             <p>Leite em pó Ninho Integral 380g R$ 14,00</p>
             <br>
-            <button onclick="Comprar()" class="button_banana">Comprar</button>
+            <button onclick="Comprar()" class="button_banana">Adicionar</button>
           </div>
           <div class="caixa_texto">
             <img src="cereal matinal crunch 230g.webp" width="100%" height="150">
             <br>
-            <p>Ceral Matinal Crunch 230g R$ 8,90</p>
+            <p>Cereal Matinal Crunch 230g R$ 8,90</p>
             <br>
-            <button onclick="Comprar()" class="button_banana">Comprar</button>
+            <button onclick="Comprar()" class="button_banana">Adicionar</button>
           </div>
           <div class="caixa_texto">
             <img src="Cereal-Matinal-Nescau-Caixa-210g.png" width="100%" height="150">
             <br>
             <p>Cereal Matinal Nescau 210g R$7,00 </p>
             <br>
-            <button onclick="Comprar()" class="button_banana">Comprar</button>
+            <button onclick="Comprar()" class="button_banana">Adicionar</button>
           </div>
           <div class="caixa_texto">
             <img src="leite integral italac.jpg" width="90%" height="150">
             <br>
             <p>Leite Integral Italac 1L R$ 2,50</p>
             <br>
-            <button onclick="Comprar()" class="button_banana">Comprar</button>
+            <button onclick="Comprar()" class="button_banana">Adicionar</button>
           </div>
           <div class="caixa_texto">
             <img src="nata santa clara 300g.jpeg" width="100%" height="150">
             <br>
             <p>Nata Santa Clara 300g R$ 9,00 </p>
             <br>
-            <button onclick="Comprar()" class="button_banana">Comprar</button>
+            <button onclick="Comprar()" class="button_banana">Adicionar</button>
           </div>
           <div class="caixa_texto">
             <img src="manteiga extra com sal President Gastronomique 380g.webp" width="100%" height="150">
             <br>
             <p>Manteiga Extra com Sal President Gastronomique 380g R$ 14,00</p>
             <br>
-            <button onclick="Comprar()" class="button_banana">Comprar</button>
+            <button onclick="Comprar()" class="button_banana">Adicionar</button>
           </div>
           <div class="caixa_texto">
             <img src="torrada tradicional bauducco 142g.webp" width="100%" height="180">
             <br>
             <p>Torrada Tradicional Bauducco 142g R$ 5,00</p>
             <br>
-            <button onclick="Comprar()" class="button_banana">Comprar</button>
+            <button onclick="Comprar()" class="button_banana">Adicionar</button>
           </div>
+
 </body>
 <script>
-
+ 
 </script>
 </html>
