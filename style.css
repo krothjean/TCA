@@ -116,19 +116,10 @@ body{
   background-color: rgb(16, 78, 16);
   color: rgb(204, 204, 204);
 }
-.titulo_hortifruti{
-  color: rgb(45, 165, 45);
+.titulo{
+  color: rgb(245, 245, 245);
   text-shadow: 2px 2px 4px #000000;
-  position: absolute;
-  left: 400px;
-}
-.titulo_acougue{
-  color: rgb(189, 7, 7);
-  text-shadow: 2px 2px 4px #000000;
-}
-.titulo_padaria{
-  color:rgb(225, 166, 16);
-  text-shadow: 2px 2px 4px #000000;
+  
 }
 .carrinho{
   height: 70px;
