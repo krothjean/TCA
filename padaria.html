@@ -30,13 +30,31 @@
     color: rgb(13, 63, 156);
 }
 
-
-.procura_padaria{
-
+input{
+  width: 200px;
+  height: 30px;
 }
-.produtos_padaria{
-  
+
+ul{
+  padding: 0px;
+  display: none; 
+  /*isso faz ficar definitivamente sumido
+**/
 }
+
+li{
+  padding: 5px;
+  margin: 0px;
+  background: #d3d3d3;
+  width: 200px;
+  border: 1px solid white;
+}
+.lista__item{
+    margin: 10px 0 10px 0;
+    font-size: 20px;
+    text-shadow: 5px 5px #000000;
+}
+
 </style>
 <body>
     <header>
@@ -45,25 +63,27 @@
         <h1 class="titulo">Padaria</h1>
        
         <div class="barra_pesquisa">    
-        <!--<input type="text" placeholder="Search..">//-->
-        <input class="procura_padaria" type="text">
-        <ul class="produtos_padaria">
-        <li>Cacetinho</li>
-        <li>Pão Caseiro de Milho</li>
-        <li>Pão de Forma sem Glúten</li>
-        <li>Pão Integral 12 Grãos Pullman</li>
-        <li>Achocolatado em Pó Nescau</li>
-        <li>Leite em pó Ninho Integral</li>
-        <li>Cereal Matinal Crunch</li>
-        <li>Cereal Matinal Nescau</li>
-        <li>Leite Integral Italac</li>
-        <li>Nata Santa Clara</li>
-        <li>Manteiga Extra com Sal President</li>
-        <li>Torrada Tradicional Bauducco</li>
-        </ul>
-        </div>
-        <img class="carrinho" src="carrinho de compras.png">
+          <input type="text" placeholder="Search.." class="procura_padaria">
+               <ul class="produtos_padaria">
+                  <li id="lista_item" class="lista_item item 1 ">Cacetinho</li>
+                  <li id="lista_item" class="lista_item item 2 "></li>Pão Caseiro de Milho</li>
+                  <li id="lista_item" class="lista_item item 3 "></li>Pão de Forma sem Glúten</li>
+                  <li id="lista_item" class="lista_item item 4 "></li>Pão Integral 12 Grãos Pullman</li>
+                  <li id="lista_item" class="lista_item item 5"></li>Achocolatado em Pó Nescau</li>
+                  <li id="lista_item" class="lista_item item 6"></li>Leite em pó Ninho Integral</li>
+                  <li id="lista_item" class="lista_item item 7"></li>Cereal Matinal Crunch</li>
+                  <li id="lista_item" class="lista_item item 8"></li>Cereal Matinal Nescau</li>
+                  <li id="lista_item" class="lista_item item 9"></li>Leite Integral Italac</li>
+                  <li id="lista_item" class="lista_item item 10"></li>Nata Santa Clara</li>
+                  <li id="lista_item" class="lista_item item 11"></li>Manteiga Extra com Sal President</li>
+                  <li id="lista_item" class="lista_item item 12"></li>Torrada Tradicional Bauducco</li>
+                </ul>
           </div>
+                  <!--<img class="carrinho" src="carrinho de compras.png">//-->
+       
+          </div>
+          <!--<button onclick="CarrinhoCompras()" class="button_carrinho"></button>//-->
+          <img class="carrinho" src="carrinho de compras.png" type="button"><a href="compras.html"></a>
         </header>  
     <div class="barra_navegacao_padaria">
         <button><a href="mercearia.html">Mercearia</button></a>

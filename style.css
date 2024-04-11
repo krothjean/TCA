@@ -121,8 +121,13 @@ body{
   text-shadow: 2px 2px 4px #000000;
   
 }
-.carrinho{
-  height: 70px;
+.button_carrinho{
+  height: 80px;
   background-color:#cbcecf;
   width:80px ;
+  border: none;
+  margin-top: 10px;
+}
+.carrinho{
+  height: 80px;
 }
