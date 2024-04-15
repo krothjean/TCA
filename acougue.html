@@ -35,11 +35,25 @@
 <body>
     <header>
     <div class="cabecalho ">
-        <img class="esquilo" src="imagem zaffari.png" alt="Imagem 1">
+        <img class="esquilo" src="fotos/imagem zaffari.png" alt="Imagem 1">
         <h1 class="titulo">Açougue</h1>
        
         <div class="barra_pesquisa">
-        <input type="text" placeholder="Search..">
+        <input type="text" placeholder="Search.." class="procura_padaria"  onkeyup="searchItems()">
+        <ul class="produtos_padaria">
+          <li id="lista_item" class="lista_item item 1 ">Sobrecoxa de Frango Congelada Lar</li>
+          <li id="lista_item" class="lista_item item 2 ">Coração de Frango Congelado Frangosul</li>
+          <li id="lista_item" class="lista_item item 3 ">Bife de Coxão Mole Resfriado</li>
+          <li id="lista_item" class="lista_item item 4 ">Alcatra Bovina</li>
+          <li id="lista_item" class="lista_item item 5">Carne Moída de Acém Bovino </li>
+          <li id="lista_item" class="lista_item item 6">Entrecot Suíno Resfriado </li>
+          <li id="lista_item" class="lista_item item 7">Filezinho de Frango Sassami Congelado</li>
+          <li id="lista_item" class="lista_item item 8">Filé de Tilapia Congelado</li>
+        </ul>
+  </div>
+  <a href="compras.html">
+    <img class="carrinho" src="fotos/carrinho de compras.png" alt="Carrinho de Compras">
+</a>
         </div>  
         
           </div>
@@ -52,56 +66,56 @@
         
           <div class="fundo">
             <div class="caixa_texto">
-              <img src="sobrecoxa de frango congelada.webp" width="110%" height="150">
+              <img src="fotos/sobrecoxa de frango congelada.webp" width="110%" height="150">
               <p>Sobrecoxa de frango congelada Lar R$ 12,90</p>
               <br>
               <button onclick="Adicionar()" class="button_banana">Adicionar</button>
         
           </div>
           <div class="caixa_texto">
-              <img src="coracao de frango congelado frangosul 1kg.webp" width="90%" height="120">
+              <img src="fotos/coracao de frango congelado frangosul 1kg.webp" width="90%" height="120">
               <br>
               <p>Coração de Frango Congelado Frangosul 1kg R$ 30,00 </p>
               <br>
               <button onclick="Adicionar()" class="button_banana">Adicionar</button>
           </div>
           <div class="caixa_texto">
-            <img src="bife de coxão mole.webp" width="90%" height="110">
+            <img src="fotos/bife de coxão mole.webp" width="90%" height="110">
             <br>
             <p>Bife de Coxão Mole Resfriado Novilho Jovem Zaffari R$ 39,90</p>
             <br>
             <button onclick="Adicionar()" class="button_banana">Adicionar</button>
           </div>
           <div class="caixa_texto">
-            <img src="alcatra bovina.webp" width="110%" height="120">
+            <img src="fotos/alcatra bovina.webp" width="110%" height="120">
             <br>
             <p>Alcatra Bovina Peadço Resfriado a Vácuo R$ 45,00</p>
             <br>
             <button onclick="Adicionar()" class="button_banana">Adicionar</button>
           </div>
           <div class="caixa_texto">
-            <img src="cane moida de acem bovino.webp" width="90%" height="120">
+            <img src="fotos/cane moida de acem bovino.webp" width="90%" height="120">
             <br>
             <p>Carne Moída de Acém Bovino Angus Carapreta Gran Selezione 400g R$ 16,90</p>
             <br>
             <button onclick="Adicionar()" class="button_banana">Adicionar</button>
           </div>
           <div class="caixa_texto">
-            <img src="entrecot suino resfriado.webp" width="90%" height="120">
+            <img src="fotos/entrecot suino resfriado.webp" width="90%" height="120">
             <br>
             <p>Entrecot Suíno Resfriado R$ 25,90</p>
             <br>
             <button onclick="Adicionar()" class="button_banana">Adicionar</button>
           </div>
           <div class="caixa_texto">
-            <img src="filezinho de frango sassami.webp" width="80%" height="120">
+            <img src="fotos/filezinho de frango sassami.webp" width="80%" height="120">
             <br>
             <p>Filezinho de Frango Sassami Congelado IQF Sadia 1kg R$ 20,90 </p>
             <br>
             <button onclick="Adicionar()" class="button_banana">Adicionar</button>
           </div>
             <div class="caixa_texto">
-              <img src="filé de tilapia.webp" width="90%" height="120">
+              <img src="fotos/filé de tilapia.webp" width="90%" height="120">
               <br>
               <p>Filé de Tilapia Congelado Fantasia Di Mare 800g R$ 41,90</p>
               <br>

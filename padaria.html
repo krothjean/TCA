@@ -7,83 +7,40 @@
     <script src="javaScript.js"></script>
     <title>Document</title>
 </head>
-<style>
-  
-  .barra_navegacao_padaria{
-    
-    overflow: hidden;
-    padding: 10px 20px;
-    text-align: center;
-  }
-  .barra_navegacao_padaria a{
-    float: left;
-  display: block;
-  color: #1f692b;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  text-align: center;
-  
-}
-.barra_navegacao_padaria a:hover{
-    background-color:rgb(241, 236, 236);
-    color: rgb(13, 63, 156);
-}
 
-input{
-  width: 200px;
-  height: 30px;
-}
-
-ul{
-  padding: 0px;
-  display: none; 
-  /*isso faz ficar definitivamente sumido
-**/
-}
-
-li{
-  padding: 5px;
-  margin: 0px;
-  background: #d3d3d3;
-  width: 200px;
-  border: 1px solid white;
-}
-.lista__item{
-    margin: 10px 0 10px 0;
-    font-size: 20px;
-    text-shadow: 5px 5px #000000;
-}
-
-</style>
 <body>
     <header>
     <div class="cabecalho ">
-        <img class="esquilo" src="imagem zaffari.png" alt="Imagem 1">
+        <img class="esquilo" src="fotos/imagem zaffari.png" alt="Imagem 1">
         <h1 class="titulo">Padaria</h1>
+        
        
         <div class="barra_pesquisa">    
-          <input type="text" placeholder="Search.." class="procura_padaria">
+          <input type="text" placeholder="Search.." class="procura_padaria"  onkeyup="searchItems()">
+          
                <ul class="produtos_padaria">
                   <li id="lista_item" class="lista_item item 1 ">Cacetinho</li>
-                  <li id="lista_item" class="lista_item item 2 "></li>Pão Caseiro de Milho</li>
-                  <li id="lista_item" class="lista_item item 3 "></li>Pão de Forma sem Glúten</li>
-                  <li id="lista_item" class="lista_item item 4 "></li>Pão Integral 12 Grãos Pullman</li>
-                  <li id="lista_item" class="lista_item item 5"></li>Achocolatado em Pó Nescau</li>
-                  <li id="lista_item" class="lista_item item 6"></li>Leite em pó Ninho Integral</li>
-                  <li id="lista_item" class="lista_item item 7"></li>Cereal Matinal Crunch</li>
-                  <li id="lista_item" class="lista_item item 8"></li>Cereal Matinal Nescau</li>
-                  <li id="lista_item" class="lista_item item 9"></li>Leite Integral Italac</li>
-                  <li id="lista_item" class="lista_item item 10"></li>Nata Santa Clara</li>
-                  <li id="lista_item" class="lista_item item 11"></li>Manteiga Extra com Sal President</li>
-                  <li id="lista_item" class="lista_item item 12"></li>Torrada Tradicional Bauducco</li>
+                  <li id="lista_item" class="lista_item item 2 ">Pão Caseiro de Milho</li>
+                  <li id="lista_item" class="lista_item item 3 ">Pão de Forma sem Glúten</li>
+                  <li id="lista_item" class="lista_item item 4 ">Pão Integral 12 Grãos Pullman</li>
+                  <li id="lista_item" class="lista_item item 5">Achocolatado em Pó Nescau</li>
+                  <li id="lista_item" class="lista_item item 6">Leite em pó Ninho Integral</li>
+                  <li id="lista_item" class="lista_item item 7">Cereal Matinal Crunch</li>
+                  <li id="lista_item" class="lista_item item 8">Cereal Matinal Nescau</li>
+                  <li id="lista_item" class="lista_item item 9">Leite Integral Italac</li>
+                  <li id="lista_item" class="lista_item item 10">Nata Santa Clara</li>
+                  <li id="lista_item" class="lista_item item 11">Manteiga Extra com Sal President</li>
+                  <li id="lista_item" class="lista_item item 12">Torrada Tradicional Bauducco</li>
                 </ul>
           </div>
+          <a href="compras.html">
+            <img class="carrinho" src="fotos/carrinho de compras.png" alt="Carrinho de Compras">
+        </a>
                   <!--<img class="carrinho" src="carrinho de compras.png">//-->
        
           </div>
           <!--<button onclick="CarrinhoCompras()" class="button_carrinho"></button>//-->
-          <img class="carrinho" src="carrinho de compras.png" type="button"><a href="compras.html"></a>
+         
         </header>  
     <div class="barra_navegacao_padaria">
         <button><a href="mercearia.html">Mercearia</button></a>
@@ -93,84 +50,84 @@ li{
         
           <div class="fundo">
             <div class="caixa_texto">
-              <img src="cacetinho.jpg" width="100%" height="150">
+              <img src="fotos/cacetinho.jpg" width="100%" height="150">
               <p>Pão Cacetinho R$ 10,00 Kg </p>
               <br>
               <button onclick="Adicionar()" class="button_banana">Adicionar</button>
         
           </div>
           <div class="caixa_texto">
-              <img src="pão caseiro de milho.jpg" width="100%" height="150">
+              <img src="fotos/pão caseiro de milho.jpg" width="100%" height="150">
               <br>
               <p>Pão caseiro de Milho Panco 500g R$ 7,90</p>
               <br>
               <button onclick="Adicionar()" class="button_banana">Adicionar</button>
           </div>
           <div class="caixa_texto">
-            <img src="pão de forma sem Gluten.webp" width="80%" height="150">
+            <img src="fotos/pão de forma sem Gluten.webp" width="80%" height="150">
             <br>
             <p>Pão de Forma Wickbold Sem Glúten 300g R$ 22,00 </p>
             <br>
             <button onclick="Adicionar()" class="button_banana">Adicionar</button>
           </div>
           <div class="caixa_texto">
-            <img src="pão integral 12 grãos Pullmann.jpg" width="115%" height="150">
+            <img src="fotos/pão integral 12 grãos Pullmann.jpg" width="115%" height="150">
             <br>
             <p>Pão integral 12 grãos Pullman 450g R$ 15,89</p>
             <br>
             <button onclick="Adicionar()" class="button_banana">Adicionar</button>
           </div>
           <div class="caixa_texto">
-            <img src="Achocolatado-em-Po-2.0-370g-Nescau-105744.png" width="90%" height="150">
+            <img src="fotos/Achocolatado-em-Po-2.0-370g-Nescau-105744.png" width="90%" height="150">
             <br>
             <p>Achocolatado em Pó Nescau 370g R$ 10,90</p>
             <br>
             <button onclick="Adicionar()" class="button_banana">Adicionar</button>
           </div>
           <div class="caixa_texto">
-            <img src="leite em pó ninho integral 380g.jpg" width="80%" height="150">
+            <img src="fotos/leite em pó ninho integral 380g.jpg" width="80%" height="150">
             <br>
             <p>Leite em pó Ninho Integral 380g R$ 14,00</p>
             <br>
             <button onclick="Adicionar()" class="button_banana">Adicionar</button>
           </div>
           <div class="caixa_texto">
-            <img src="cereal matinal crunch 230g.webp" width="100%" height="150">
+            <img src="fotos/cereal matinal crunch 230g.webp" width="100%" height="150">
             <br>
             <p>Cereal Matinal Crunch 230g R$ 8,90</p>
             <br>
             <button onclick="Adicionar()" class="button_banana">Adicionar</button>
           </div>
           <div class="caixa_texto">
-            <img src="Cereal-Matinal-Nescau-Caixa-210g.png" width="100%" height="150">
+            <img src="fotos/Cereal-Matinal-Nescau-Caixa-210g.png" width="100%" height="150">
             <br>
             <p>Cereal Matinal Nescau 210g R$7,00 </p>
             <br>
             <button onclick="Adicionar()" class="button_banana">Adicionar</button>
           </div>
           <div class="caixa_texto">
-            <img src="leite integral italac.jpg" width="90%" height="150">
+            <img src="fotos/leite integral italac.jpg" width="90%" height="150">
             <br>
             <p>Leite Integral Italac 1L R$ 2,50</p>
             <br>
             <button onclick="Adicionar()" class="button_banana">Adicionar</button>
           </div>
           <div class="caixa_texto">
-            <img src="nata santa clara 300g.jpeg" width="100%" height="150">
+            <img src="fotos/nata santa clara 300g.jpeg" width="100%" height="150">
             <br>
             <p>Nata Santa Clara 300g R$ 9,00 </p>
             <br>
             <button onclick="Adicionar()" class="button_banana">Adicionar</button>
           </div>
           <div class="caixa_texto">
-            <img src="manteiga extra com sal President Gastronomique 380g.webp" width="100%" height="150">
+            <img src="fotos/manteiga extra com sal President Gastronomique 380g.webp" width="100%" height="150">
             <br>
             <p>Manteiga Extra com Sal President Gastronomique 380g R$ 14,00</p>
             <br>
             <button onclick="Adicionar()" class="button_banana">Adicionar</button>
           </div>
           <div class="caixa_texto">
-            <img src="torrada tradicional bauducco 142g.webp" width="100%" height="180">
+            <img src="fotos/torrada tradicional bauducco 142g.webp" width="100%" height="180">
             <br>
             <p>Torrada Tradicional Bauducco 142g R$ 5,00</p>
             <br>

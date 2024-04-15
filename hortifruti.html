@@ -35,13 +35,25 @@
 <body>
     <header>
     <div class="cabecalho ">
-        <img class="esquilo" src="imagem zaffari.png" alt="Imagem 1">
+        <img class="esquilo" src="fotos/imagem zaffari.png" alt="Imagem 1">
         <h1 class="titulo">Hortifruti</h1>
         
         <div class="barra_pesquisa">   
-        <input type="text" placeholder="Search..">
+        <input type="text" placeholder="Search.." class="procura_padaria"  onkeyup="searchItems()">
+        <ul class="produtos_padaria">
+          <li id="lista_item" class="lista_item item 1 ">Banana Prata</li>
+          <li id="lista_item" class="lista_item item 2 ">Batata Branca </li>
+          <li id="lista_item" class="lista_item item 3 ">Maçã Fuji</li>
+          <li id="lista_item" class="lista_item item 4 ">Cebola Branca</li>
+          <li id="lista_item" class="lista_item item 5">Tomate</li>
+          <li id="lista_item" class="lista_item item 6">Alface Crespa</li>
+          <li id="lista_item" class="lista_item item 7">Ovos Brancos</li>
+          <li id="lista_item" class="lista_item item 8">Mamão Papaia</li>
+        </ul>
         </div>
-        
+        <a href="compras.html">
+          <img class="carrinho" src="fotos/carrinho de compras.png" alt="Carrinho de Compras">
+      </a>
           </div>
         </header>  
     <div class="barra_navegacao_hortifruti">
@@ -52,56 +64,59 @@
         
           <div class="fundo">
             <div class="caixa_texto">
-              <img src="banana.png" width="80%" height="150">
+              <img src="fotos/banana.png" width="80%" height="150">
               <p> Banana Prata R$ 5,00 Kg</p>
               <br>
-              <button onclick="Adicionar()" class="button_banana">Adicionar</button>
-        
+              <!--<button onclick="Adicionar()" class="button_banana">Adicionar</button>//-->
+              <div>
+                <button id="acaoBtn">Adicionar</button>
+                <span id="quantidade">0</span>
+            </div>
           </div>
           <div class="caixa_texto">
-              <img src="batata.jpg" width="80%" height="150">
+              <img src="fotos/batata.jpg" width="80%" height="150">
               <br>
               <p>Batata Branca R$ 5,00 Kg</p>
               <br>
               <button onclick="Adicionar()" class="button_banana">Adicionar</button>
           </div>
           <div class="caixa_texto">
-            <img src="maca fuji.webp" width="80%" height="150">
+            <img src="fotos/maca fuji.webp" width="80%" height="150">
             <br>
             <p>Maçã Fuji R$ 8,00 Kg</p>
             <br>
             <button onclick="Adicionar()" class="button_banana">Adicionar</button>
           </div>
           <div class="caixa_texto">
-            <img src="cebola branca.jpeg" width="80%" height="150">
+            <img src="fotos/cebola branca.jpeg" width="80%" height="150">
             <br>
             <p>Cebola Branca R$ 4,00 Kg</p>
             <br>
             <button onclick="Adicionar()" class="button_banana">Adicionar</button>
           </div>
           <div class="caixa_texto">
-            <img src="tomate.png" width="80%" height="150">
+            <img src="fotos/tomate.png" width="80%" height="150">
             <br>
             <p>Tomate R$ 10,49 Kg</p>
             <br>
             <button onclick="Adicionar()" class="button_banana">Adicionar</button>
           </div>
           <div class="caixa_texto">
-            <img src="alface.jpeg" width="80%" height="150">
+            <img src="fotos/alface.jpeg" width="80%" height="150">
             <br>
             <p>Alface Crespa R$ 4,98 un</p>
             <br>
             <button onclick="Adicionar()" class="button_banana">Adicionar</button>
           </div>
           <div class="caixa_texto">
-            <img src="OvosBrancosMedioNaturovos30Unidades.webp" width="80%" height="150">
+            <img src="fotos/OvosBrancosMedioNaturovos30Unidades.webp" width="80%" height="150">
             <br>
             <p>Ovos Brancos Medio Naturovos 30 Unidades R$ 22,90</p>
             <br>
             <button onclick="Adicionar()" class="button_banana">Adicionar</button>
           </div>
           <div class="caixa_texto">
-            <img src="mamao papaia.webp" width="80%" height="150">
+            <img src="fotos/mamao papaia.webp" width="80%" height="150">
             <br>
             <p>Mamão Papaia Inteiro R$ 7,00</p>
             <br>

@@ -130,4 +130,55 @@ body{
 }
 .carrinho{
   height: 80px;
+  margin-top: 20px;
+}
+
+.barra_navegacao_padaria{
+    
+  overflow: hidden;
+  padding: 10px 20px;
+  text-align: center;
+}
+.barra_navegacao_padaria a{
+  float: left;
+display: block;
+color: #1f692b;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+text-align: center;
+
+}
+.barra_navegacao_padaria a:hover{
+  background-color:rgb(241, 236, 236);
+  color: rgb(13, 63, 156);
+}
+
+.produtos_padaria{
+display: none;
+}
+input{
+width: 200px;
+height: 30px;
+
+}
+
+ul{
+padding: 0px;
+
+/*isso faz ficar definitivamente sumido
+**/
+}
+
+li{
+padding: 5px;
+margin: 0px;
+background: #d3d3d3;
+width: 200px;
+border: 1px solid white;
+}
+.lista__item{
+  margin: 10px 0 10px 0;
+  font-size: 20px;
+  text-shadow: 5px 5px #000000;
 }
