@@ -9,6 +9,7 @@
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  background-color: #801717;
   
 }
 body{
@@ -45,7 +46,7 @@ body{
 
 .esquilo{
   height: 80px;
-  background-color: #cbcecf ;
+  background-color: #801717 ;
 }
 .barra_pesquisa{
   overflow: hidden;

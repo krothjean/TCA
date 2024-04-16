@@ -51,5 +51,15 @@ function searchItems() {
                   }
                  )
 
+  let adicionarAoCarrinho = document.getElementsByClassName("button_banana")
+  for(var i= 0; adicionarAoCarrinho.length; i++) {
+    adicionarAoCarrinho[i].addEventListener("click", adicionarAoCarrinho)
+  }
+
+  function adicionarAoCarrinho(event){
+   let button = event.target
+   console.log(button)
+  }
+
                                                   
        
