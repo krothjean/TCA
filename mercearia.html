@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="javaScript.js"></script>
+    <title>Document</title>
+</head>
+<style>
+  .titulo_mercearia{
+    color:rgb(245, 245, 245);
+  text-shadow: 2px 2px 4px #000000;
+  }
+</style>
+<body>
+    <header>
+    <div class="cabecalho ">
+        <img class="esquilo" src="fotos/imagem zaffari.png" alt="Imagem 1">
+        <h1 class="titulo_mercearia">Mercearia</h1>
+        <div class="barra_pesquisa">
+        <input type="text" placeholder="Search.." class="procura_padaria"  onkeyup="searchItems()">
+        <ul class="produtos_padaria">
+          <li id="lista_item" class="lista_item item 1 ">Arroz Branco</li>
+          <li id="lista_item" class="lista_item item 2 ">Feijão Preto</li>
+          <li id="lista_item" class="lista_item item 3 ">Massa caseira </li>
+          <li id="lista_item" class="lista_item item 4 ">Azeite de Oliva</li>
+          <li id="lista_item" class="lista_item item 5">Açucar Refinado</li>
+          <li id="lista_item" class="lista_item item 6">Café</li>
+          <li id="lista_item" class="lista_item item 7">Filtro de Papel 102</li>
+          <li id="lista_item" class="lista_item item 8">Refrigerante </li>
+        </ul>
+        </div>
+        <a href="compras.html">
+          <img class="carrinho" src="fotos/carrinho de compras.png" alt="Carrinho de Compras">
+      </a>
+          </div>
+        </header>  
+    <div class="barra_navegacao">
+        <button><a href="hortifruti.html">Hortifruti</button></a>
+        <button><a href="acougue.html">Açougue</button></a>
+        <button><a href="padaria.html">Padaria</button></a>
+          </div>
+        
+          <div class="fundo">
+            <div class="caixa_texto">
+              <img src="fotos/Arroz-Branco-Tipo-1-Kiarroz-Pacote-5kg.png" width="110%" height="150">
+              <p> Arroz Branco Kiarroz 5Kg Tipo 1</p>
+              <span class="preco">R$ 28,00</span>
+              <br>
+              <button onclick="Adicionar('Arroz Branco Kiarroz 5 Kg Tipo 1' , '28,00')" class="button_banana">Adicionar</button>
+        
+          </div>
+          <div class="caixa_texto">
+              <img src="fotos/feijao.jpg" width="90%" height="120">
+              <br>
+              <p>Feijão Preto Meu Biju 1Kg</p>
+              <span class="preco">R$ 5,00</span>
+              <br>
+              <button onclick="Adicionar()" class="button_banana">Adicionar</button>
+          </div>
+          <div class="caixa_texto">
+            <img src="fotos/massa_caseira_f_frida_esp_400g_c015_458d75a0-0d8a-4187-92f1-5dba07ee1980.png" width="90%" height="110">
+            <br>
+            <p>Massa caseira fritz Frida esp 400g</p>
+            <span class="preco">R$2,80</span>
+            <br>
+            <button onclick="Adicionar()" class="button_banana">Adicionar</button>
+          </div>
+          <div class="caixa_texto">
+            <img src="fotos/Azeite_de_Oliva_Extra_virgem_Gallo_250ml.png" width="110%" height="120">
+            <br>
+            <p>Azeite de Oliva Extra Virgem Gallo 250ml</p>
+            <span class="preco">R$ 29,90</span>
+            <br>
+            <button onclick="Adicionar()" class="button_banana">Adicionar</button>
+          </div>
+          <div class="caixa_texto">
+            <img src="fotos/acucar refinado união.jpg" width="90%" height="120">
+            <br>
+            <p>Açucar Refinado União 1Kg</p>
+            <span class="preco">R$ 4,90</span>
+           <br>
+            <button onclick="Adicionar()" class="button_banana">Adicionar</button>
+          </div>
+          <div class="caixa_texto">
+            <img src="fotos/Cafe extra Forte Melitta 500g.webp" width="90%" height="120">
+            <br>
+            <p>Café Extra Forte Melitta 500g</p>
+            <span class="preco">R$ 18,00</span>
+            <br>
+            <button onclick="Adicionar()" class="button_banana">Adicionar</button>
+          </div>
+          <div class="caixa_texto">
+            <img src="fotos/filtro de papel 102 Brigitta 30 unidades.webp" width="65%" height="120">
+            <br>
+            <p> Filtro de Papel 102 Brigitta 30 Unidades</p>
+            <span class="preco">R$ 5,00</span>
+            <br>
+            <button onclick="Adicionar()" class="button_banana">Adicionar</button>
+          </div>
+            <div class="caixa_texto">
+              <img src="fotos/Refrigerante Coca Cola 2L Original.webp" width="90%" height="120">
+              <br>
+              <p>Refrigerante Coca Cola Original 2L</p>
+              <span class="preco">R$ 9,49</span>
+              <br>
+              <button onclick="Adicionar()" class="button_banana">Adicionar</button>
+            </div>
+        
+           
+</body>
+<script>
+
+</script>
+</html>

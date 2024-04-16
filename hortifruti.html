@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="javaScript.js"></script>
+    <title>Document</title>
+</head>
+<style>
+  .barra_navegacao_hortifruti{
+    overflow: hidden;
+    padding: 10px 20px;
+    text-align: center;
+  }
+  .barra_navegacao_hortifruti a{
+    float: left;
+  display: block;
+  color: #1f692b;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  text-align: center;
+  
+}
+.barra_navegacao_hortifruti a:hover{
+    background-color:rgb(241, 236, 236);
+
+
+    color: rgb(13, 63, 156);
+}
+
+
+</style>
+<body>
+    <header>
+    <div class="cabecalho ">
+        <img class="esquilo" src="fotos/imagem zaffari.png" alt="Imagem 1">
+        <h1 class="titulo">Hortifruti</h1>
+        
+        <div class="barra_pesquisa">   
+        <input type="text" placeholder="Search.." class="procura_padaria"  onkeyup="searchItems()">
+        <ul class="produtos_padaria">
+          <li id="lista_item" class="lista_item item 1 ">Banana Prata</li>
+          <li id="lista_item" class="lista_item item 2 ">Batata Branca </li>
+          <li id="lista_item" class="lista_item item 3 ">Maçã Fuji</li>
+          <li id="lista_item" class="lista_item item 4 ">Cebola Branca</li>
+          <li id="lista_item" class="lista_item item 5">Tomate</li>
+          <li id="lista_item" class="lista_item item 6">Alface Crespa</li>
+          <li id="lista_item" class="lista_item item 7">Ovos Brancos</li>
+          <li id="lista_item" class="lista_item item 8">Mamão Papaia</li>
+        </ul>
+        </div>
+        <a href="carrinho_de_compras.html">
+          <img class="carrinho" src="fotos/carrinho de compras.png" alt="Carrinho de compras">
+      </a>
+          </div>
+        </header>  
+    <div class="barra_navegacao_hortifruti">
+        <button><a href="mercearia.html">Mercearia</button></a>
+        <button><a href="acougue.html">Açougue</button></a>
+        <button><a href="padaria.html">Padaria</button></a>
+          </div>
+        
+          <div class="fundo">
+            <div class="caixa_texto">
+              <img src="fotos/banana.png" width="80%" height="150">
+              <p>Banana Prata</p>
+              <span class="preco">R$ 5,00 Kg</span>
+              <button onclick="adicionarAoCarrinho()" class="button_banana">Adicionar</button>
+              
+            </div>
+          </div>
+          <div class="caixa_texto">
+              <img src="fotos/batata.jpg" width="80%" height="150">
+              <br>
+              <p>Batata Branca R$ 5,00 Kg</p>
+              <br>
+              <button onclick="Adicionar()" class="button_banana">Adicionar</button>
+          </div>
+          <div class="caixa_texto">
+            <img src="fotos/maca fuji.webp" width="80%" height="150">
+            <br>
+            <p>Maçã Fuji</p>
+            <span class="preco">R$ 8,00 Kg</span>
+            <br>
+            <button onclick="Adicionar()" class="button_banana">Adicionar</button>
+          </div>
+          <div class="caixa_texto">
+            <img src="fotos/cebola branca.jpeg" width="80%" height="150">
+            <br>
+            <p>Cebola Branca</p>
+            <span class="preco">R$ 4,00 Kg</span>
+            <br>
+            <button onclick="Adicionar()" class="button_banana">Adicionar</button>
+          </div>
+          <div class="caixa_texto">
+            <img src="fotos/tomate.png" width="80%" height="150">
+            <br>
+            <p>Tomate</p>
+            <span class="preco">R$ 10,49 Kg</span>
+            <br>
+            <button onclick="Adicionar()" class="button_banana">Adicionar</button>
+          </div>
+          <div class="caixa_texto">
+            <img src="fotos/alface.jpeg" width="80%" height="150">
+            <br>
+            <p>Alface Crespa</p>
+            <span class="preco">R$ 4,98 un</span>
+            <br>
+            <button onclick="Adicionar()" class="button_banana">Adicionar</button>
+          </div>
+          <div class="caixa_texto">
+            <img src="fotos/OvosBrancosMedioNaturovos30Unidades.webp" width="80%" height="150">
+            <br>
+            <p>Ovos Brancos Medio Naturovos 30 Unidades</p>
+            <span class="preco">R$ 22,90</span>
+            <br>
+            <button onclick="Adicionar()" class="button_banana">Adicionar</button>
+          </div>
+          <div class="caixa_texto">
+            <img src="fotos/mamao papaia.webp" width="80%" height="150">
+            <br>
+            <p>Mamão Papaia Inteiro</p>
+            <span class="preco">R$ 7,00</span>
+            <br>
+            <button onclick="Adicionar()" class="button_banana">Adicionar</button>
+          </div>
+</body>
+</html>

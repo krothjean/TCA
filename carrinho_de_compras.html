@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color: rgb(212, 205, 205);
+    }
+    .carrinho_de_compras{
+        position: absolute;
+        margin:  100% ;
+  width: 100%;
+  border-collapse: collapse;
+}
+.carrinho-item-coluna{
+    position: relative;
+    left: 100%;
+  text-align: start;
+  border-bottom: 1px solid #959595;
+  padding-bottom: 6px;
+  text-transform: uppercase;
+}
+.segunda-coluna,
+.terceira-coluna{
+  width: 26%;
+}
+.normal-section{
+margin-top: 80px;
+}
+.h2{
+    position: relative;
+    left: 100px;
+}
+
+</style>
+<body>
+    <header>
+        <div class="cabecalho ">
+            <img class="esquilo" src="fotos/imagem zaffari.png" alt="Imagem 1">
+            <h1 class="titulo">Hortifruti</h1>
+        </div>
+        </header>
+        <section class="container normal-section">
+            <h2 class="titulo-carrinho">Carrinho</h2>
+        <table class="carrinho-de-compra">
+            <thead>
+                <tr>
+                    <th class="carrinho-item-coluna primeira-coluna">Item</th>
+                    <th class="carrinho-item-coluna segunda-coluna">Preço</th>
+                    <th class="carrinho-item-coluna terceira-coluna">Quantidade</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <img src="fotos/" alt="">
+                        <strong class="titulo-carrinho">Banana</strong>
+                        
+                    </td>   
+                    <td>
+                        <span class="preco">R$ 5,00</span>   
+                    </td> 
+                    <td>
+                        <input type="Preco" value="2" min="0">
+                        <button type="button">Remover</button>
+                    </td>
+                </tr>
+            </tbody>
+            <tfoot>
+            </tfoot>
+        </table>
+        <button type="button-finalizar-compras">Finalizar Compra</button>
+        </section>
+</body>
+</html>
