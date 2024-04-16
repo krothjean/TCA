@@ -4,7 +4,7 @@ function Adicionar(nome, preco){
   // Cria um novo elemento de item de carrinho
   var novoItem = document.createElement('div');
   novoItem.textContent = nome + ' - R$ ' + preco;
-
+ 
   // Adiciona o novo item ao carrinho
   document.getElementById('carrinho').appendChild(novoItem);
 }
