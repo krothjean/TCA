@@ -8,6 +8,27 @@ function Adicionar(nome, preco){
   // Adiciona o novo item ao carrinho
   document.getElementById('carrinho').appendChild(novoItem);
 }
+<<<<<<< HEAD
+function Adicionar_ao_Carrinho(){
+
+}
+function pesquisar(){
+
+}
+function Search(){
+    let input = document.getElementById('searchbar').value
+    input = input.toLowerCase()
+    let x = document.getElementsByClassName('alimentos')
+    
+    for(i = 0; i < x.length; i++){
+        if(!x[i].innerHTML.toLowerCase().includes(input)){
+            x[i].style.display  = "none"
+        }else{
+            x[i].style.display = "list-item"
+        }
+    }
+=======
+>>>>>>> 97699bb9d7c72987bb743b60abfc252802718e61
 
   const barraDePesquisa = document.querySelector("#pesquisa")//<input/>
 const lista = document.querySelector("#lista");//<ul></ul>
@@ -50,6 +71,16 @@ function searchItems() {
                   }
                   }
                  )
+
+  let adicionarAoCarrinho = document.getElementsByClassName("button_banana")
+  for(var i= 0; adicionarAoCarrinho.length; i++) {
+    adicionarAoCarrinho[i].addEventListener("click", adicionarAoCarrinho)
+  }
+
+  function adicionarAoCarrinho(event){
+   let button = event.target
+   console.log(button)
+  }
 
                                                   
        
