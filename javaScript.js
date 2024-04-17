@@ -8,7 +8,6 @@ function Adicionar(nome, preco){
   // Adiciona o novo item ao carrinho
   document.getElementById('carrinho').appendChild(novoItem);
 }
-<<<<<<< HEAD
 function Adicionar_ao_Carrinho(){
 
 }
@@ -27,9 +26,7 @@ function Search(){
             x[i].style.display = "list-item"
         }
     }
-=======
->>>>>>> 97699bb9d7c72987bb743b60abfc252802718e61
-
+ }
   const barraDePesquisa = document.querySelector("#pesquisa")//<input/>
 const lista = document.querySelector("#lista");//<ul></ul>
 const itens = document.querySelectorAll("#lista__item");//<li><li/>
@@ -82,5 +79,19 @@ function searchItems() {
    console.log(button)
   }
 
-                                                  
+  const removeProdutoButton = document.getElementsByClassName("produto-remove-button")
+  for(var i = 0; i < removeProdutoButton.length; i++) {
+    removeProdutoButton[i].addEventListener("click", function(event) {
+        event.target.parentElement.parentElement.remove()
+    })
+  }               
+  
+  function addProdutosParaCarrinho(event) {
+    const button = event.target
+    const productInfos = button.parentElement.parentElement
+    const productImage = productInfos.getElementsByClassName("product-image")
+    const producttitulo = productInfos.getElementsByClassName("product-titulos")
+    const productpreco = productInfos.getElementsByClassName("product-price")
+
+  }
        

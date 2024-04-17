@@ -23,16 +23,68 @@
   padding-bottom: 6px;
   text-transform: uppercase;
 }
-.segunda-coluna,
-.terceira-coluna{
+.segunda-coluna{
+    position: relative;
+    left: 100%;
   width: 26%;
 }
-.normal-section{
-margin-top: 80px;
-}
-.h2{
+.terceira-coluna{
     position: relative;
-    left: 100px;
+    left: 100%;
+  width: 26%;
+}
+.button-finalizar-compras{
+    display: flex;
+  position: relative;
+  left: 20%;
+  margin: 24px auto 0;
+  background-color: #56c5db;
+  border-radius: 6px;
+  padding: 16px 10px;
+  font-size: 15px;
+  font-weight: bold;
+}
+.carrinho-produto td{
+  padding: 8px 0;
+}
+.produto_indentificacao{
+  display: flex;
+  align-items: center;
+}
+.carrinho-preco{
+    position: relative;
+    left: 388%;
+  font-family: "relaway", sans-serif;
+}
+.produto-quantidade{
+    position: relative;
+    left: 395%;
+  width: 48px;
+  height: 34px;
+  border-radius: 6px;
+  border: 2px solid #56c5db;
+  text-align: center;
+  background-color: #eee;
+}
+.produto-remove-button{
+    position: relative;
+    left:390%;
+    color: var(--white);
+  margin-left: 12px;
+  background-color: red;
+border-radius: 10px;
+}
+.produto-remove-button:hover{
+  filter: brightness(0.8);
+}
+
+.carrinho-total-container{
+    border-top: 1px solid #959595;
+    position: relative;
+    left: 100%;
+}
+.normal-section + .normal-section{
+margin-top: 80px;
 }
 
 </style>
@@ -54,25 +106,31 @@ margin-top: 80px;
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>
+                <tr class="carrinho-produto">
+                    <td class="produto_indentificacao">
                         <img src="fotos/" alt="">
                         <strong class="titulo-carrinho">Banana</strong>
                         
                     </td>   
                     <td>
-                        <span class="preco">R$ 5,00</span>   
+                        <span class="carrinho-preco">R$ 5,00</span>   
                     </td> 
                     <td>
-                        <input type="Preco" value="2" min="0">
-                        <button type="button">Remover</button>
+                        <input class="produto-quantidade"type="numero" value="2" min="0">
+                        <button class="produto-remove-button" type="button">Remover</button>
                     </td>
+                </tr>
+                <tr class="carrinho-produto">
                 </tr>
             </tbody>
             <tfoot>
             </tfoot>
+            <tr>
+            <td colspan="3" class="carrinho-total-container">
+                <strong>Total</strong>
+                <span>R$ 5,00</span>
         </table>
-        <button type="button-finalizar-compras">Finalizar Compra</button>
+        <button class="button-finalizar-compras" type="button">Finalizar Compra</button>
         </section>
 </body>
 </html>
