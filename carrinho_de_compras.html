@@ -95,6 +95,7 @@ margin-top: 80px;
             <h1 class="titulo">Hortifruti</h1>
         </div>
         </header>
+        <section class="items"></section>
         <section class="container normal-section">
             <h2 class="titulo-carrinho">Carrinho</h2>
         <table class="carrinho-de-compra">
@@ -106,20 +107,21 @@ margin-top: 80px;
                 </tr>
             </thead>
             <tbody>
-                <tr class="carrinho-produto">
-                    <td class="produto_indentificacao">
-                        <img src="fotos/" alt="">
-                        <strong class="titulo-carrinho">Banana</strong>
-                        
-                    </td>   
-                    <td>
-                        <span class="carrinho-preco">R$ 5,00</span>   
-                    </td> 
-                    <td>
-                        <input class="produto-quantidade"type="numero" value="2" min="0">
-                        <button class="produto-remove-button" type="button">Remover</button>
-                    </td>
-                </tr>
+             
+                    <tr class="carrinho-produto">
+                        <td class="produto_indentificacao">
+                            <img src="fotos/" alt="">
+                            <strong class="titulo-carrinho">${item.nome}</strong>
+                        </td>   
+                        <td>
+                            <span class="preco">${item.preco}</span>   
+                        </td> 
+                        <td>
+                            <input class="produto-quantidade"type="numero" value="1" min="0">
+                            <button class="produto-remove-button" type="button">Remover</button>
+                        </td>
+                    </tr>
+        
                 <tr class="carrinho-produto">
                 </tr>
             </tbody>
