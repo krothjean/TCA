@@ -102,17 +102,6 @@ body{
  padding: 5px 10px;
  color: #4b4b4b;
 }
-.Search input[type=text] {
-  display: flex;
-  align-items: center;
-  border: 1px solid #ccc;
- background-color: #000006;
- width: 400px;
- margin: 20px auto;
- border-radius: 20px;
- padding: 5px 10px;
- color: #4b4b4b;
-}
 
 .caixa_texto{
   background-color: white;
@@ -155,7 +144,7 @@ body{
   border: none;
   margin-top: 10px;
 }
-.carrinho{
+#carrinho{
   height: 80px;
   margin-top: 20px;
 }
@@ -214,9 +203,9 @@ border: 1px solid white;
   font-family: "Raleway", sans-serif;
   font-weight: bold;
 }
-.carrinho_de_compras{
+/*.carrinho_de_compras{
   width: 100%;
-}
+}*/
 .carrinho-item-coluna{
   position: relative;
   height: 100px;

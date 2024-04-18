@@ -1,20 +1,14 @@
 // Função para adicionar um produto ao carrinho de compras
-function Adicionar(nome, preco){
+//function Adicionar(nome, preco){
   
   // Cria um novo elemento de item de carrinho
-  var novoItem = document.createElement('div');
-  novoItem.textContent = nome + ' - R$ ' + preco;
+  //var novoItem = document.createElement('div');
+  //novoItem.textContent = nome + ' - R$ ' + preco;
  
   // Adiciona o novo item ao carrinho
-  document.getElementById('carrinho').appendChild(novoItem);
-}
-<<<<<<< HEAD
-function Adicionar_ao_Carrinho(){
+  //document.getElementById('carrinho').appendChild(novoItem);
+//}
 
-}
-function pesquisar(){
-
-}
 function Search(){
     let input = document.getElementById('searchbar').value
     input = input.toLowerCase()
@@ -27,9 +21,7 @@ function Search(){
             x[i].style.display = "list-item"
         }
     }
-=======
->>>>>>> 97699bb9d7c72987bb743b60abfc252802718e61
-
+  }
   const barraDePesquisa = document.querySelector("#pesquisa")//<input/>
 const lista = document.querySelector("#lista");//<ul></ul>
 const itens = document.querySelectorAll("#lista__item");//<li><li/>
@@ -64,23 +56,58 @@ function searchItems() {
               // Verifica se o elemento clicado não é o elemento de busca (.procura_padaria) nem um de seus descendentes
                   if (!event.target.closest('.procura_padaria')) {
               // Se o clique não for dentro do elemento de busca, oculta a lista
-                  document.querySelector('.produtos_padaria').style.display = 'none';
+                  document.getElementById('#produtos_padaria').style.display = 'none';
                   } else {
               // Se o clique for dentro do elemento de busca, exibe a lista
-                  document.querySelector('.produtos_padaria').style.display = 'block';
+                  document.getElementById('#produtos_padaria').style.display = 'block';
                   }
                   }
                  )
+// Variável para armazenar os itens do carrinho
+  let carrinho = []
+// Função para adicionar um produto ao carrinho
+function Adicionar(nome, preco) {
+    // Adiciona o produto ao carrinho como um objeto com propriedades de nome e preço
+    carrinho.push({ nome: nome, preco: preco });
+    // Chama a função para atualizar o resumo do carrinho na página
+    atualizarCarrinho();
+}
 
-  let adicionarAoCarrinho = document.getElementsByClassName("button_banana")
-  for(var i= 0; adicionarAoCarrinho.length; i++) {
-    adicionarAoCarrinho[i].addEventListener("click", adicionarAoCarrinho)
+// Função para atualizar o resumo do carrinho na página
+function atualizarCarrinho() {
+    // Obtém o elemento que contém a lista de itens do carrinho
+    let carrinho = document.getElementById('carrinho');
+    // Obtém a lista de itens do carrinho na página
+    let listaCarrinho = document.getElementById('produtos_padaria');
+    console.log(listaCarrinho)
+    // Variável para armazenar o total do carrinho
+    let totalCarrinho = 0;
+    // Limpa a lista de itens do carrinho antes de atualizar
+    listaCarrinho.innerHTML = '';
+
+    // Itera sobre cada item no carrinho
+    carrinho.forEach(item => {
+        // Cria um novo elemento de lista para cada item no carrinho
+        let listItem = document.createElement('li');
+        // Define o texto do item da lista com o nome e o preço do produto
+        listItem.textContent = item.nome + ' - R$' + item.preco.toFixed(2);
+        // Adiciona uma classe ao elemento de lista
+        listItem.classList.add('cart-item'); // Adiciona a classe 'cart-item'
+        // Adiciona o item da lista à lista de carrinho na página
+        listaCarrinho.appendChild(listItem);
+        // Adiciona o preço do item ao total do carrinho
+        totalCarrinho += item.preco;
+    });
+
+    // Atualiza o texto que exibe o total do carrinho na página
+    let totalCarrinhoElement = document.getElementById('total-carrinho');
+    if (totalCarrinhoElement) {
+        totalCarrinhoElement.textContent = 'Total do Carrinho: R$' + totalCarrinho.toFixed(2);
+    }
+
+    
+     
+    
   }
-
-  function adicionarAoCarrinho(event){
-   let button = event.target
-   console.log(button)
-  }
-
-                                                  
-       
+                                            
+        
