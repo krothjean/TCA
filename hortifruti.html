@@ -40,15 +40,15 @@
         
         <div class="barra_pesquisa">   
         <input type="text" placeholder="Search.." class="procura_padaria"  onkeyup="searchItems()">
-        <ul id="produtos_padaria">
-          <li id="lista_item" class="lista_item item 1 ">Banana Prata</li>
-          <li id="lista_item" class="lista_item item 2 ">Batata Branca </li>
-          <li id="lista_item" class="lista_item item 3 ">Maçã Fuji</li>
-          <li id="lista_item" class="lista_item item 4 ">Cebola Branca</li>
-          <li id="lista_item" class="lista_item item 5">Tomate</li>
-          <li id="lista_item" class="lista_item item 6">Alface Crespa</li>
-          <li id="lista_item" class="lista_item item 7">Ovos Brancos</li>
-          <li id="lista_item" class="lista_item item 8">Mamão Papaia</li>
+        <ul class="produtos_padaria">
+          <li id="lista_item" class="lista_itens">Banana Prata</li>
+          <li id="lista_item" class="lista_itens">Batata Branca </li>
+          <li id="lista_item" class="lista_itens">Maçã Fuji</li>
+          <li id="lista_item" class="lista_itens">Cebola Branca</li>
+          <li id="lista_item" class="lista_itens">Tomate</li>
+          <li id="lista_item" class="lista_itens">Alface Crespa</li>
+          <li id="lista_item" class="lista_itens">Ovos Brancos</li>
+          <li id="lista_item" class="lista_itens">Mamão Papaia</li>
         </ul>
         </div>
         <a href="carrinho_de_compras.html">
@@ -68,7 +68,7 @@
                 <p>Banana Prata</p>
                 <span class="preco">R$ 5,00 Kg</span>
                 <br>
-                <button onclick="Adicionar()" class="button_banana">Adicionar</button>
+                <button onclick="Adicionar('Banana Prata', 5.00)" class="button_banana">Adicionar</button>
             </div>
               
           </div>
@@ -109,7 +109,7 @@
             <p>Alface Crespa</p>
             <span class="preco">R$ 4,98 un</span>
             <br>
-            <button onclick="Adicionar()" class="button_banana">Adicionar</button>
+            <button onclick="Adicionar('Alface Crespa', 4.98)" class="button_banana">Adicionar</button>
           </div>
           <div class="caixa_texto">
             <img src="fotos/OvosBrancosMedioNaturovos30Unidades.webp" width="80%" height="150">
@@ -125,7 +125,7 @@
             <p>Mamão Papaia Inteiro</p>
             <span class="preco">R$ 7,00</span>
             <br>
-            <button onclick="Adicionar()" class="button_banana">Adicionar</button>
+            <button onclick="Adicionar('Mamão papaia Inteiro', 7.00)" class="button_banana">Adicionar</button>
           </div>
 </body>
 </html>

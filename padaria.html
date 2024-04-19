@@ -18,19 +18,19 @@
         <div class="barra_pesquisa">    
           <input type="text" placeholder="Search.." class="procura_padaria"  onkeyup="searchItems()">
           
-               <ul id="produtos_padaria">
-                  <li id="lista_item" class="lista_item item 1 ">Cacetinho</li>
-                  <li id="lista_item" class="lista_item item 2 ">Pão Caseiro de Milho</li>
-                  <li id="lista_item" class="lista_item item 3 ">Pão de Forma sem Glúten</li>
-                  <li id="lista_item" class="lista_item item 4 ">Pão Integral 12 Grãos Pullman</li>
-                  <li id="lista_item" class="lista_item item 5">Achocolatado em Pó Nescau</li>
-                  <li id="lista_item" class="lista_item item 6">Leite em pó Ninho Integral</li>
-                  <li id="lista_item" class="lista_item item 7">Cereal Matinal Crunch</li>
-                  <li id="lista_item" class="lista_item item 8">Cereal Matinal Nescau</li>
-                  <li id="lista_item" class="lista_item item 9">Leite Integral Italac</li>
-                  <li id="lista_item" class="lista_item item 10">Nata Santa Clara</li>
-                  <li id="lista_item" class="lista_item item 11">Manteiga Extra com Sal President</li>
-                  <li id="lista_item" class="lista_item item 12">Torrada Tradicional Bauducco</li>
+               <ul class="produtos_padaria">
+                  <li id="lista_item" class="lista_itens">Cacetinho</li>
+                  <li id="lista_item" class="lista_itens2">Pão Caseiro de Milho</li>
+                  <li id="lista_item" class="lista_itens">Pão de Forma sem Glúten</li>
+                  <li id="lista_item" class="lista_itens">Pão Integral 12 Grãos Pullman</li>
+                  <li id="lista_item" class="lista_itens">Achocolatado em Pó Nescau</li>
+                  <li id="lista_item" class="lista_itens">Leite em pó Ninho Integral</li>
+                  <li id="lista_item" class="lista_itens">Cereal Matinal Crunch</li>
+                  <li id="lista_item" class="lista_itens">Cereal Matinal Nescau</li>
+                  <li id="lista_item" class="lista_itens">Leite Integral Italac</li>
+                  <li id="lista_item" class="lista_itens">Nata Santa Clara</li>
+                  <li id="lista_item" class="lista_itens">Manteiga Extra com Sal President</li>
+                  <li id="lista_item" class="lista_itens">Torrada Tradicional Bauducco</li>
                 </ul>
           </div>
           <a href="carrinho_de_compras.html">
@@ -54,7 +54,7 @@
               <p>Pão Cacetinho</p>
               <span class="preco">R$ 10,00 Kg</span>
               <br>
-              <button onclick="Adicionar('carrinho_de_compras')" class="button_banana">Adicionar</button>
+              <button onclick="Adicionar('Pão Cacetinho', 10.00)" class="button_banana">Adicionar</button>
         
           </div>
           <div class="caixa_texto">
@@ -63,7 +63,7 @@
               <p>Pão caseiro de Milho Panco 500g</p>
               <span class="preco">R$ 7,90</span>
               <br>
-              <button onclick="Adicionar()" class="button_banana">Adicionar</button>
+              <button onclick="Adicionar('Pão Caseiro de Milho Panco 500g', 7.90)" class="button_banana">Adicionar</button>
           </div>
           <div class="caixa_texto">
             <img src="fotos/pão de forma sem Gluten.webp" width="80%" height="150">
@@ -71,7 +71,7 @@
             <p>Pão de Forma Wickbold Sem Glúten 300g</p>
             <span class="preco">R$ 22,00</span>
             <br>
-            <button onclick="Adicionar()" class="button_banana">Adicionar</button>
+            <button onclick="Adicionar('Pão de Forma Wickbold Sem Glúten 300g', 22.00)" class="button_banana">Adicionar</button>
           </div>
           <div class="caixa_texto">
             <img src="fotos/pão integral 12 grãos Pullmann.jpg" width="115%" height="150">
@@ -79,7 +79,7 @@
             <p>Pão integral 12 grãos Pullman 450g</p>
             <span class="preco">R$ 15,89</span>
             <br>
-            <button onclick="Adicionar()" class="button_banana">Adicionar</button>
+            <button onclick="Adicionar('Pão Integral 12 Grãos Pullman', 15.89)" class="button_banana">Adicionar</button>
           </div>
           <div class="caixa_texto">
             <img src="fotos/Achocolatado-em-Po-2.0-370g-Nescau-105744.png" width="90%" height="150">
@@ -87,7 +87,7 @@
             <p>Achocolatado em Pó Nescau 370g</p>
             <span class="preco">R$ 10,90</span>
             <br>
-            <button onclick="Adicionar()" class="button_banana">Adicionar</button>
+            <button onclick="Adicionar('Achocolatado em pó Nescau 370g', 10.90)" class="button_banana">Adicionar</button>
           </div>
           <div class="caixa_texto">
             <img src="fotos/leite em pó ninho integral 380g.jpg" width="80%" height="150">
@@ -95,7 +95,7 @@
             <p>Leite em pó Ninho Integral 380g</p>
             <span class="preco">R$ 14,00</span>
             <br>
-            <button onclick="Adicionar()" class="button_banana">Adicionar</button>
+            <button onclick="Adicionar('Leite em Pó Ninho Integral 380g', 14.00)" class="button_banana">Adicionar</button>
           </div>
           <div class="caixa_texto">
             <img src="fotos/cereal matinal crunch 230g.webp" width="100%" height="150">
@@ -103,7 +103,7 @@
             <p>Cereal Matinal Crunch 230g</p>
             <span class="preco">R$ 8,90</span>
             <br>
-            <button onclick="Adicionar()" class="button_banana">Adicionar</button>
+            <button onclick="Adicionar('Cereal Matinal Crunch 230g', 8.90)" class="button_banana">Adicionar</button>
           </div>
           <div class="caixa_texto">
             <img src="fotos/Cereal-Matinal-Nescau-Caixa-210g.png" width="100%" height="150">
@@ -111,7 +111,7 @@
             <p>Cereal Matinal Nescau 210g</p>
             <span class="preco">R$ 7,00</span>
             <br>
-            <button onclick="Adicionar()" class="button_banana">Adicionar</button>
+            <button onclick="Adicionar('Cereal Matinal Nescau 210g', 7.00)" class="button_banana">Adicionar</button>
           </div>
           <div class="caixa_texto">
             <img src="fotos/leite integral italac.jpg" width="90%" height="150">
@@ -119,7 +119,7 @@
             <p>Leite Integral Italac 1L</p>
             <span class="preco">R$ 2,50</span>
             <br>
-            <button onclick="Adicionar()" class="button_banana">Adicionar</button>
+            <button onclick="Adicionar('Leite Integral Italac 1L', 2.50)" class="button_banana">Adicionar</button>
           </div>
           <div class="caixa_texto">
             <img src="fotos/nata santa clara 300g.jpeg" width="100%" height="150">
@@ -127,7 +127,7 @@
             <p>Nata Santa Clara 300g</p>
             <span class="preco">R$ 9,00</span>
             <br>
-            <button onclick="Adicionar()" class="button_banana">Adicionar</button>
+            <button onclick="Adicionar('Nata Santa Clara 300g', 9.00)" class="button_banana">Adicionar</button>
           </div>
           <div class="caixa_texto">
             <img src="fotos/manteiga extra com sal President Gastronomique 380g.webp" width="100%" height="150">
@@ -135,7 +135,7 @@
             <p>Manteiga Extra com Sal President Gastronomique 380g</p>
             <span class="preco">R$ 14,00</span>
             <br>
-            <button onclick="Adicionar()" class="button_banana">Adicionar</button>
+            <button onclick="Adicionar('Manteiga Extra Com Sal President Gastronomique 380g', 14.00)" class="button_banana">Adicionar</button>
           </div>
           <div class="caixa_texto">
             <img src="fotos/torrada tradicional bauducco 142g.webp" width="100%" height="180">
@@ -143,7 +143,7 @@
             <p>Torrada Tradicional Bauducco 142g</p>
             <span class="preco">R$ 5,00</span>
             <br>
-            <button onclick="Adicionar()" class="button_banana">Adicionar</button>
+            <button onclick="Adicionar('Torrada Tradicional Bauducco 142g', 5.00)" class="button_banana">Adicionar</button>
           </div>
 
 </body>

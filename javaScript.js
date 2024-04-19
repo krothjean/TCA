@@ -1,27 +1,16 @@
-// Função para adicionar um produto ao carrinho de compras
-
-//function Adicionar(nome, preco){
-function Adicionar(nome, preco, novoItem){
-
+function Remover() {
+  let quantidadeProduto = document.querySelector('.produto_quantidade').value;
+  let subtração = quantidadeProduto - 1
   
-  // Cria um novo elemento de item de carrinho
-  //var novoItem = document.createElement('div');
-  //novoItem.textContent = nome + ' - R$ ' + preco;
- 
-  // Adiciona o novo item ao carrinho
-  //document.getElementById('carrinho').appendChild(novoItem);
-//}
-
-
-  document.getElementById('carrinho_de_compras').appendChild(novoItem);
 }
-/*function Adicionar_ao_Carrinho(){
-
-}*/
-function pesquisar(){
+var carrinho = []
+function Adicionar(){
+  let produtos = document.querySelector('.caixa_texto').textContent
+  alert(produtos)
+  
+  
 
 }
-
 function Search(){
     let input = document.getElementById('searchbar').value
     input = input.toLowerCase()
@@ -72,22 +61,22 @@ function searchItems() {
               // Verifica se o elemento clicado não é o elemento de busca (.procura_padaria) nem um de seus descendentes
                   if (!event.target.closest('.procura_padaria')) {
               // Se o clique não for dentro do elemento de busca, oculta a lista
-                  document.getElementById('#produtos_padaria').style.display = 'none';
+                  document.getElementById('.produtos_padaria').style.display = 'none';
                   } else {
               // Se o clique for dentro do elemento de busca, exibe a lista
-                  document.getElementById('#produtos_padaria').style.display = 'block';
+                  document.getElementById('.produtos_padaria').style.display = 'block';
                   }
                   }
                  )
 // Variável para armazenar os itens do carrinho
-  let carrinho = []
+ // let carrinho = []
 // Função para adicionar um produto ao carrinho
-function Adicionar(nome, preco) {
+//function Adicionar(nome, preco) {
     // Adiciona o produto ao carrinho como um objeto com propriedades de nome e preço
-    carrinho.push({ nome: nome, preco: preco });
+    //carrinho.push({ nome: nome, preco: preco });
     // Chama a função para atualizar o resumo do carrinho na página
-    atualizarCarrinho();
-}
+    //atualizarCarrinho();
+//}
 
 
 // Função para atualizar o resumo do carrinho na página
@@ -96,7 +85,6 @@ function atualizarCarrinho() {
     let carrinho = document.getElementById('carrinho');
     // Obtém a lista de itens do carrinho na página
     let listaCarrinho = document.getElementById('produtos_padaria');
-    console.log(listaCarrinho)
     // Variável para armazenar o total do carrinho
     let totalCarrinho = 0;
     // Limpa a lista de itens do carrinho antes de atualizar
@@ -120,24 +108,9 @@ function atualizarCarrinho() {
     let totalCarrinhoElement = document.getElementById('total-carrinho');
     if (totalCarrinhoElement) {
         totalCarrinhoElement.textContent = 'Total do Carrinho: R$' + totalCarrinho.toFixed(2);
-    }
-
-    
-     
-    
+    } 
   }
                                             
-        
-
-  /*let Adicionar = document.getElementsByClassName("button_banana")
-  for(var i= 0; Adicionar.length; i++) {
-    Adicionar[i].addEventListener("click", Adicionar)
-  }
-
-  function Adicionar(event){
-   let button = event.target
-   console.log(button)
-  }*/
   document.addEventListener('DOMContentLoaded', function() {
     // Estrutura de dados para representar o carrinho
     let carrinho_de_compras = [];
@@ -172,21 +145,8 @@ function atualizarCarrinho() {
       const carrinhoSection = document.querySelector('.container.normal-section');
       carrinhoSection.innerHTML = ''; // Limpar a seção do carrinho antes de atualizar
       carrinho_de_compras.forEach(function(item) {
-        const carrinhoItemHTML = `
-            <tr class="carrinho-produto">
-                <td class="produto_indentificacao">
-                    <img src="fotos/" alt="">
-                    <strong class="titulo-carrinho">${item.nome}</strong>
-                </td>   
-                <td>
-                    <span class="preco">${item.preco}</span>   
-                </td> 
-                <td>
-                    <input class="produto-quantidade"type="numero" value="1" min="0">
-                    <button class="produto-remove-button" type="button">Remover</button>
-                </td>
-            </tr>
-        `;
+        const carrinhoItemHTML = 
+            
         carrinhoSection.insertAdjacentHTML('beforeend', carrinhoItemHTML);
     });
 
