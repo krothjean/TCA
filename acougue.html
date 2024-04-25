@@ -8,145 +8,140 @@
     <script src="javaScript.js"></script>
     <title>Document</title>
 </head>
-<style>
-    .barra_navegacao_acougue{
-    overflow: hidden;
-    padding: 10px 20px;
-    text-align: center;
-  }
-  .barra_navegacao_acougue a{
-    float: left;
-  display: block;
-  color: #1f692b;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  text-align: center;
-  
-}
-.barra_navegacao_acougue a:hover{
-    background-color:rgb(241, 236, 236);
 
-
-    color: rgb(13, 63, 156);
-}
-
-</style>
 <body>
     <header>
     <div class="cabecalho ">
         <img class="esquilo" src="fotos/imagem zaffari.png" alt="Imagem 1">
         <h1 class="titulo">Açougue</h1>
-       
-        <div class="barra_pesquisa">
-        <input type="text" placeholder="Search.." class="procura_padaria"  onkeyup="searchItems()">
-        <ul class="produtos_padaria">
-          <li id="lista_item" class="lista_itens">Sobrecoxa de Frango Congelada Lar</li>
-          <li id="lista_item" class="lista_itens">Coração de Frango Congelado Frangosul</li>
-          <li id="lista_item" class="lista_itens">Bife de Coxão Mole Resfriado</li>
-          <li id="lista_item" class="lista_itens">Alcatra Bovina</li>
-          <li id="lista_item" class="lista_itens">Carne Moída de Acém Bovino </li>
-          <li id="lista_item" class="lista_itens">Entrecot Suíno Resfriado </li>
-          <li id="lista_item" class="lista_itens">Filezinho de Frango Sassami Congelado</li>
-          <li id="lista_item" class="lista_itens">Filé de Tilapia Congelado</li>
-        </ul>
-  </div>
-  
-  <a href="carrinho_de_compras.html">
-    <img id="carrinho" src="fotos/carrinho de compras.png" alt="Carrinho de Compras">
-    
-</a>
-        </div>  
         
+       
+        <div class="barra_pesquisa">    
+          <input type="text" placeholder="Search.." class="procura_padaria"  onkeyup="searchItems()">
+          
+               <ul id="produtos_padaria">
+                <li id="lista_item-13">Sobrecoxa de frango congelada Lar</li>
+                <li id="lista_item-14">Coração de Frango Congelado Frangosul</li>
+                <li id="lista_item-15">Bife de Coxão Mole Resfriado</li>
+                <li id="lista_item-16">Alcatra Bovina</li>
+                <li id="lista_item-17">Carne Moída de Acém Bovino </li>
+                <li id="lista_item-18">Entrecot Suíno Resfriado</li>
+                <li id="lista_item-19">Filezinho de Frango Sassami Congelado</li>
+                <li id="lista_item-20">Filé de Tilapia Congelado</li>
+                
+            </ul>    
           </div>
-        </header>  
-    <div class="barra_navegacao_acougue">
-        <button><a href="hortifruti.html">Hortifruti</button></a>
+
+          <a href="carrinho_de_compras.html">
+            <img id="carrinho" src="fotos/carrinho de compras.png" alt="Carrinho de Compras">
+        </a>
+      </div>
+      </header>
+
+      <div class="barra_navegacao_padaria">
         <button><a href="mercearia.html">Mercearia</button></a>
         <button><a href="padaria.html">Padaria</button></a>
+        <button><a href="hortifruti.html">Hortifruti</button></a>
           </div>
         
           <div class="fundo">
             <div class="caixa_texto">
-              <img src="fotos/sobrecoxa de frango congelada.webp" width="110%" height="150">
-              <p>Sobrecoxa de frango congelada Lar</p>
-              <span class="preco">R$ 12,90</span>
+              <img src="fotos/sobrecoxa de frango congelada.webp" width="100%" height="150">
+              <p id="produto-13">Sobrecoxa de frango congelada Lar</p>
+              <span id="preco">R$ 12,90</span>
               <br>
-              <button onclick="Adicionar('Sobrecoxa de Frango Congelada', 12.90)" class="button_banana">Adicionar</button>
-        
+              <button onclick="Adicionar('13')" class="button_banana" id="botao-produto-13">Adicionar</button>
+              <button onclick="diminuirQuantidade('produto-13')" class="button_minus">-</button>
+              <input type="text" id="quantidade-produto-13" class="input" value="0">
+              <button onclick="aumentarQuantidade('produto-13')" class="button_plus">+</button>
           </div>
+
           <div class="caixa_texto">
-              <img src="fotos/coracao de frango congelado frangosul 1kg.webp" width="90%" height="120">
+              <img src="fotos/coracao de frango congelado frangosul 1kg.webp" width="100%" height="150">
               <br>
-              <p>Coração de Frango Congelado Frangosul 1kg</p>
+              <p id="produto-14">Coração de Frango Congelado Frangosul 1kg</p>
               <span class="preco">R$ 30,00</span>
               <br>
-              <button onclick="Adicionar('Coração de Frango Congelado Frangosul', 30.00)" class="button_banana">Adicionar</button>
-          </div>
+              <button onclick="Adicionar('14')" class="button_banana" id="botao-produto-14">Adicionar</button>
+               <button onclick="diminuirQuantidade('produto-14')" class="button_minus">-</button>
+              <input type="text" id="quantidade-produto-14" class="input" value="0">
+              <button onclick="aumentarQuantidade('produto-14')" class="button_plus">+</button>
+            </div>
+
           <div class="caixa_texto">
-            <img src="fotos/bife de coxão mole.webp" width="90%" height="110">
+            <img src="fotos/bife de coxão mole.webp" width="80%" height="150">
             <br>
-            <p>Bife de Coxão Mole Resfriado Novilho Jovem Zaffari</p>
+            <p id="produto-15">Bife de Coxão Mole Resfriado Novilho Jovem Zaffari </p>
             <span class="preco">R$ 39,90</span>
             <br>
-            <button onclick="Adicionar('Bife de Coxão Mole Resfriado Novilho Jovem Zaffari', 39.90)" class="button_banana">Adicionar</button>
-          </div>
+            <button onclick="Adicionar('15')" class="button_banana" id="botao-produto-15">Adicionar</button>
+             <button onclick="diminuirQuantidade('produto-15')" class="button_minus">-</button>
+              <input type="text" id="quantidade-produto-15" class="input" value="0">
+              <button onclick="aumentarQuantidade('produto-15')" class="button_plus">+</button>
+            </div>
+
           <div class="caixa_texto">
-            <img src="fotos/alcatra bovina.webp" width="110%" height="120">
+            <img src="fotos/alcatra bovina.webp" width="115%" height="150">
             <br>
-            <p>Alcatra Bovina Pedaço Resfriado a Vácuo</p>
+            <p id="produto-16">Alcatra Bovina Pedaço Resfriado a Vácuo </p>
             <span class="preco">R$ 45,00</span>
             <br>
-            <button onclick="Adicionar('Alcatra Bovina Pedaço Resfriado a Vácuo', 45.00)" class="button_banana">Adicionar</button>
-          </div>
+            <button onclick="Adicionar('16')" class="button_banana" id="botao-produto-16">Adicionar</button>
+             <button onclick="diminuirQuantidade('produto-16')" class="button_minus">-</button>
+              <input type="text" id="quantidade-produto-16" class="input" value="0">
+              <button onclick="aumentarQuantidade('produto-16')" class="button_plus">+</button>
+            </div>
+
           <div class="caixa_texto">
-            <img src="fotos/cane moida de acem bovino.webp" width="90%" height="120">
+            <img src="fotos/cane moida de acem bovino.webp" width="90%" height="150">
             <br>
-            <p>Carne Moída de Acém Bovino Angus Carapreta Gran Selezione 400g</p>
+            <p id="produto-17">Carne Moída de Acém Bovino Angus Carapreta Gran Selezione 400g </p>
             <span class="preco">R$ 16,90</span>
             <br>
-            <button onclick="Adicionar('Carne Moída de Acém Bovino Angus Carapreta Gran Selezione 400g', 16.90)" class="button_banana">Adicionar</button>
-          </div>
+            <button onclick="Adicionar('17')" class="button_banana" id="botao-produto-17">Adicionar</button>
+             <button onclick="diminuirQuantidade('produto-17')" class="button_minus">-</button>
+              <input type="text" id="quantidade-produto-17" class="input" value="0">
+              <button onclick="aumentarQuantidade('produto-17')" class="button_plus">+</button>
+            </div>
+
           <div class="caixa_texto">
-            <img src="fotos/entrecot suino resfriado.webp" width="90%" height="120">
+            <img src="fotos/entrecot suino resfriado.webp" width="80%" height="150">
             <br>
-            <p>Entrecot Suíno Resfriado</p>
+            <p id="produto-18">Entrecot Suíno Resfriado </p>
             <span class="preco">R$ 25,90</span>
             <br>
-            <button onclick="Adicionar('Entrecot Suíno Resfriado', 25.90)" class="button_banana">Adicionar</button>
-          </div>
+            <button onclick="Adicionar('18')" class="button_banana" id="botao-produto-18">Adicionar</button>
+             <button onclick="diminuirQuantidade('produto-18')" class="button_minus">-</button>
+              <input type="text" id="quantidade-produto-18" class="input" value="0">
+              <button onclick="aumentarQuantidade('produto-18')" class="button_plus">+</button>
+            </div>
+
           <div class="caixa_texto">
-            <img src="fotos/filezinho de frango sassami.webp" width="80%" height="120">
+            <img src="fotos/filezinho de frango sassami.webp" width="100%" height="150">
             <br>
-            <p>Filezinho de Frango Sassami Congelado IQF Sadia 1kg</p>
+            <p id="produto-19">Filezinho de Frango Sassami Congelado IQF Sadia 1kg </p>
             <span class="preco">R$ 20,90</span>
             <br>
-            <button onclick="Adicionar('Filezinho de Frango Sassami Congelado IQF Sadia 1Kg', 20.90)" class="button_banana">Adicionar</button>
-          </div>
-            <div class="caixa_texto">
-              <img src="fotos/filé de tilapia.webp" width="90%" height="120">
-              <br>
-              <p>Filé de Tilapia Congelado Fantasia Di Mare 800g</p>
-              <span class="preco">R$ 41,90</span>
-              <br>
-              <button onclick="Adicionar('Filé de Tilapia Congelado Fantasia Di Mare 800g', 41.90)" class="button_banana">Adicionar</button>
+            <button onclick="Adicionar('19')" class="button_banana" id="botao-produto-19">Adicionar</button> 
+            <button onclick="diminuirQuantidade('produto-19')" class="button_minus">-</button>
+            <input type="text" id="quantidade-produto-19" class="input" value="0">
+            <button onclick="aumentarQuantidade('produto-19')" class="button_plus">+</button>
             </div>
-            <!--<ul id="carrinho">
-                Itens do carrinho serão adicionados aqui dinamicamente 
-               <li id="lista_item" class="lista_item item 1 ">Sobrecoxa de Frango Congelada Lar</li>
-               <li id="lista_item" class="lista_item item 2 ">Coração de Frango Congelado Frangosul</li>
-               <li id="lista_item" class="lista_item item 3 ">Bife de Coxão Mole Resfriado</li>
-               <li id="lista_item" class="lista_item item 4 ">Alcatra Bovina</li>
-               <li id="lista_item" class="lista_item item 5">Carne Moída de Acém Bovino </li>
-               <li id="lista_item" class="lista_item item 6">Entrecot Suíno Resfriado </li>
-               <li id="lista_item" class="lista_item item 7">Filezinho de Frango Sassami Congelado</li>
-               <li id="lista_item" class="lista_item item 8">Filé de Tilapia Congelado</li>
-            </ul>//-->
 
-
-           
+          <div class="caixa_texto">
+            <img src="fotos/filé de tilapia.webp" width="100%" height="150">
+            <br>
+            <p id="produto-20">Filé de Tilapia Congelado Fantasia Di Mare 800g </p>
+            <span class="preco">R$ 41,90</span>
+            <br>
+            <button onclick="Adicionar('20')" class="button_banana" id="botao-produto-20">Adicionar</button>
+             <button onclick="diminuirQuantidade('produto-20')" class="button_minus">-</button>
+              <input type="text" id="quantidade-produto-20" class="input" value="0">
+              <button onclick="aumentarQuantidade('produto-20')" class="button_plus">+</button>
+            </div>
+            
 </body>
 <script>
-
+ 
 </script>
 </html>

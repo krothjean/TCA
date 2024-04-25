@@ -21,14 +21,14 @@
         <div class="barra_pesquisa">
         <input type="text" placeholder="Search.." class="procura_padaria"  onkeyup="searchItems()">
         <ul class="produtos_padaria">
-          <li id="lista_item" class="lista_itens">Arroz Branco</li>
-          <li id="lista_item" class="lista_itens">Feijão Preto</li>
-          <li id="lista_item" class="lista_itens">Massa caseira </li>
-          <li id="lista_item" class="lista_itens">Azeite de Oliva</li>
-          <li id="lista_item" class="lista_itens">Açucar Refinado</li>
-          <li id="lista_item" class="lista_itens">Café</li>
-          <li id="lista_item" class="lista_itens">Filtro de Papel 102</li>
-          <li id="lista_item" class="lista_itens">Refrigerante </li>
+          <li id="lista_item21">Arroz Branco</li>
+          <li id="lista_item22">Feijão Preto</li>
+          <li id="lista_item23">Massa caseira </li>
+          <li id="lista_item24">Azeite de Oliva</li>
+          <li id="lista_item25">Açucar Refinado</li>
+          <li id="lista_item26">Café</li>
+          <li id="lista_item27">Filtro de Papel 102</li>
+          <li id="lista_item28">Refrigerante </li>
         </ul>
         </div>
         <a href="carrinho_de_compras.html">
@@ -45,67 +45,93 @@
           <div class="fundo">
             <div class="caixa_texto">
               <img src="fotos/Arroz-Branco-Tipo-1-Kiarroz-Pacote-5kg.png" width="110%" height="150">
-              <div class="nome-produto"> Arroz Branco Kiarroz 5Kg Tipo 1</div>
-              <div class="preco-produto">R$ 28,00</div>
+              <p id="produto-21"> Arroz Branco Kiarroz 5Kg Tipo 1</div>
+              <span id="preco">R$ 28,00</div>
               <br>
-              <button onclick="Adicionar('Arroz Branco Kiarroz 5 Kg Tipo 1' , 28.00)" class="button_banana">Adicionar</button>
-        
+              <button onclick="Adicionar('21')" class="button_banana" id="botao-produto-21">Adicionar</button>
+              <button onclick="diminuirQuantidade('produto-21')" class="button_minus">-</button>
+              <input type="text" id="quantidade-produto-21" class="input" value="0">
+              <button onclick="aumentarQuantidade('produto-21')" class="button_plus">+</button>
           </div>
+
           <div class="caixa_texto">
               <img src="fotos/feijao.jpg" width="90%" height="120">
               <br>
-              <p>Feijão Preto Meu Biju 1Kg</p>
-              <span class="preco">R$ 5,00</span>
+              <p id="produto-22">Preto Meu Biju 1Kg</p>
+              <span id="preco">R$ 5,00</span>
               <br>
-              <button onclick="Adicionar('Feijão Preto Meu Biju 1 Kg', 5.00)" class="button_banana">Adicionar</button>
+              <button onclick="Adicionar('22')" class="button_banana" id="botao-produto-22">Adicionar</button>
+              <button onclick="diminuirQuantidade('produto-22')" class="button_minus">-</button>
+              <input type="text" id="quantidade-produto-22" class="input" value="0">
+              <button onclick="aumentarQuantidade('produto-22')" class="button_plus">+</button>
           </div>
+
           <div class="caixa_texto">
             <img src="fotos/massa_caseira_f_frida_esp_400g_c015_458d75a0-0d8a-4187-92f1-5dba07ee1980.png" width="90%" height="110">
             <br>
-            <p>Massa caseira fritz Frida esp 400g</p>
-            <span class="preco">R$2,80</span>
+            <p id="produto-23">Massa caseira fritz Frida esp 400g</p>
+            <span id="preco">R$2,80</span>
             <br>
-            <button onclick="Adicionar('Massa Caseira Fritz Frida Espaguete 400g', 2.80)" class="button_banana">Adicionar</button>
+            <button onclick="Adicionar('23')" class="button_banana" id="botao-produto-23">Adicionar</button>
+              <button onclick="diminuirQuantidade('produto-23')" class="button_minus">-</button>
+              <input type="text" id="quantidade-produto-23" class="input" value="0">
+              <button onclick="aumentarQuantidade('produto-23')" class="button_plus">+</button>
           </div>
           <div class="caixa_texto">
             <img src="fotos/Azeite_de_Oliva_Extra_virgem_Gallo_250ml.png" width="110%" height="120">
             <br>
-            <p>Azeite de Oliva Extra Virgem Gallo 250ml</p>
-            <span class="preco">R$ 29,90</span>
+            <p id="produto-24">Azeite de Oliva Extra Virgem Gallo 250ml</p>
+            <span id="preco">R$ 29,90</span>
             <br>
-            <button onclick="Adicionar('Azeite de Oliva Extra Virgem Gallo 250ml', 29.90)" class="button_banana">Adicionar</button>
+            <button onclick="Adicionar('24')" class="button_banana" id="botao-produto-24">Adicionar</button>
+              <button onclick="diminuirQuantidade('produto-24')" class="button_minus">-</button>
+              <input type="text" id="quantidade-produto-24" class="input" value="0">
+              <button onclick="aumentarQuantidade('produto-24')" class="button_plus">+</button>
           </div>
           <div class="caixa_texto">
             <img src="fotos/acucar refinado união.jpg" width="90%" height="120">
             <br>
-            <p>Açucar Refinado União 1Kg</p>
-            <span class="preco">R$ 4,90</span>
+            <p id="produto-25">Açucar Refinado União 1Kg</p>
+            <span id="preco">R$ 4,90</span>
            <br>
-            <button onclick="Adicionar('Açucar Refinado União', 4.90)" class="button_banana">Adicionar</button>
+           <button onclick="Adicionar('25')" class="button_banana" id="botao-produto-13">Adicionar</button>
+              <button onclick="diminuirQuantidade('produto-25')" class="button_minus">-</button>
+              <input type="text" id="quantidade-produto-25" class="input" value="0">
+              <button onclick="aumentarQuantidade('produto-25')" class="button_plus">+</button>
           </div>
           <div class="caixa_texto">
             <img src="fotos/Cafe extra Forte Melitta 500g.webp" width="90%" height="120">
             <br>
-            <p>Café Extra Forte Melitta 500g</p>
-            <span class="preco">R$ 18,00</span>
+            <p id="produto-26">Café Extra Forte Melitta 500g</p>
+            <span id="preco">R$ 18,00</span>
             <br>
-            <button onclick="Adicionar('Café Extra Forte Melitta 500g', 18.00)" class="button_banana">Adicionar</button>
+            <button onclick="Adicionar('26')" class="button_banana" id="botao-produto-26">Adicionar</button>
+              <button onclick="diminuirQuantidade('produto-26')" class="button_minus">-</button>
+              <input type="text" id="quantidade-produto-26" class="input" value="0">
+              <button onclick="aumentarQuantidade('produto-26')" class="button_plus">+</button>
           </div>
           <div class="caixa_texto">
             <img src="fotos/filtro de papel 102 Brigitta 30 unidades.webp" width="65%" height="120">
             <br>
-            <p> Filtro de Papel 102 Brigitta 30 Unidades</p>
-            <span class="preco">R$ 5,00</span>
+            <p id="produto-27"> Filtro de Papel 102 Brigitta 30 Unidades</p>
+            <span id="preco">R$ 5,00</span>
             <br>
-            <button onclick="Adicionar('Filtro de Papel 102 Brigitta 30 Unidades', 5.00)" class="button_banana">Adicionar</button>
+            <button onclick="Adicionar('27')" class="button_banana" id="botao-produto-27">Adicionar</button>
+              <button onclick="diminuirQuantidade('produto-27')" class="button_minus">-</button>
+              <input type="text" id="quantidade-produto-27" class="input" value="0">
+              <button onclick="aumentarQuantidade('produto-27')" class="button_plus">+</button>
           </div>
+
             <div class="caixa_texto">
               <img src="fotos/Refrigerante Coca Cola 2L Original.webp" width="90%" height="120">
               <br>
-              <p>Refrigerante Coca Cola Original 2L</p>
-              <span class="preco">R$ 9,49</span>
+              <p id="produto-28">Refrigerante Coca Cola Original 2L</p>
+              <span id="preco">R$ 9,49</span>
               <br>
-              <button onclick="Adicionar('Refrigerante Coca Cola Original 2L', 9.49)" class="button_banana">Adicionar</button>
+              <button onclick="Adicionar('28')" class="button_banana" id="botao-produto-28">Adicionar</button>
+              <button onclick="diminuirQuantidade('produto-28')" class="button_minus">-</button>
+              <input type="text" id="quantidade-produto-28" class="input" value="0">
+              <button onclick="aumentarQuantidade('produto-28')" class="button_plus">+</button>
             </div>
         
            

@@ -18,31 +18,29 @@
         <div class="barra_pesquisa">    
           <input type="text" placeholder="Search.." class="procura_padaria"  onkeyup="searchItems()">
           
-               <ul class="produtos_padaria">
-                  <li id="lista_item" class="lista_itens">Cacetinho</li>
-                  <li id="lista_item" class="lista_itens2">Pão Caseiro de Milho</li>
-                  <li id="lista_item" class="lista_itens">Pão de Forma sem Glúten</li>
-                  <li id="lista_item" class="lista_itens">Pão Integral 12 Grãos Pullman</li>
-                  <li id="lista_item" class="lista_itens">Achocolatado em Pó Nescau</li>
-                  <li id="lista_item" class="lista_itens">Leite em pó Ninho Integral</li>
-                  <li id="lista_item" class="lista_itens">Cereal Matinal Crunch</li>
-                  <li id="lista_item" class="lista_itens">Cereal Matinal Nescau</li>
-                  <li id="lista_item" class="lista_itens">Leite Integral Italac</li>
-                  <li id="lista_item" class="lista_itens">Nata Santa Clara</li>
-                  <li id="lista_item" class="lista_itens">Manteiga Extra com Sal President</li>
-                  <li id="lista_item" class="lista_itens">Torrada Tradicional Bauducco</li>
-                </ul>
+               <ul id="produtos_padaria">
+                <li id="lista_item-1">Cacetinho</li>
+                <li id="lista_item-2">Pão Caseiro de Milho</li>
+                <li id="lista_item-3">Pão de Forma sem Glúten</li>
+                <li id="lista_item-4">Pão Integral 12 Grãos Pullman</li>
+                <li id="lista_item-5">Achocolatado em Pó Nescau</li>
+                <li id="lista_item-6">Leite em pó Ninho Integral</li>
+                <li id="lista_item-7">Cereal Matinal Crunch</li>
+                <li id="lista_item-8">Cereal Matinal Nescau</li>
+                <li id="lista_item-9">Leite Integral Italac</li>
+                <li id="lista_item-10">Nata Santa Clara</li>
+                <li id="lista_item-11">Manteiga Extra com Sal President</li>
+                <li id="lista_item-12">Torrada Tradicional Bauducco</li>
+            </ul>    
           </div>
+
           <a href="carrinho_de_compras.html">
             <img id="carrinho" src="fotos/carrinho de compras.png" alt="Carrinho de Compras">
         </a>
-                  <!--<img class="carrinho" src="carrinho de compras.png">//-->
-       
-          </div>
-          <!--<button onclick="CarrinhoCompras()" class="button_carrinho"></button>//-->
-         
-        </header>  
-    <div class="barra_navegacao_padaria">
+      </div>
+      </header>
+
+      <div class="barra_navegacao_padaria">
         <button><a href="mercearia.html">Mercearia</button></a>
         <button><a href="acougue.html">Açougue</button></a>
         <button><a href="hortifruti.html">Hortifruti</button></a>
@@ -50,102 +48,149 @@
         
           <div class="fundo">
             <div class="caixa_texto">
-              <img src="fotos/cacetinho.jpg" width="100%" height="150">
-              <p>Pão Cacetinho</p>
-              <span class="preco">R$ 10,00 Kg</span>
+              <img src="fotos/PAO-DE-SANDUICHE-FORMA.png" width="100%" height="150">
+              <p id="produto-1">Pão de Sanduiche Forma Seven Boys 450g </p>
+              <span id="preco">R$ 6,50</span>
               <br>
-              <button onclick="Adicionar('Pão Cacetinho', 10.00)" class="button_banana">Adicionar</button>
-        
+              <button onclick="Adicionar('1')" class="button_banana" id="botao-produto-1">Adicionar</button>
+              <button onclick="diminuirQuantidade('produto-1')" class="button_minus">-</button>
+              <input type="text" id="quantidade-produto-1" class="input" value="0">
+              <button onclick="aumentarQuantidade('produto-1')" class="button_plus">+</button>
           </div>
+
           <div class="caixa_texto">
               <img src="fotos/pão caseiro de milho.jpg" width="100%" height="150">
               <br>
-              <p>Pão caseiro de Milho Panco 500g</p>
+              <p id="produto-2">Pão caseiro de Milho Panco 500g</p>
               <span class="preco">R$ 7,90</span>
               <br>
-              <button onclick="Adicionar('Pão Caseiro de Milho Panco 500g', 7.90)" class="button_banana">Adicionar</button>
-          </div>
+              <button onclick="Adicionar('2')" class="button_banana" id="botao-produto-2">Adicionar</button>
+               <button onclick="diminuirQuantidade('produto-2')" class="button_minus">-</button>
+              <input type="text" id="quantidade-produto-2" class="input" value="0">
+              <button onclick="aumentarQuantidade('produto-2')" class="button_plus">+</button>
+            </div>
+
           <div class="caixa_texto">
             <img src="fotos/pão de forma sem Gluten.webp" width="80%" height="150">
             <br>
-            <p>Pão de Forma Wickbold Sem Glúten 300g</p>
+            <p id="produto-3">Pão de Forma Wickbold Sem Glúten 300g</p>
             <span class="preco">R$ 22,00</span>
             <br>
-            <button onclick="Adicionar('Pão de Forma Wickbold Sem Glúten 300g', 22.00)" class="button_banana">Adicionar</button>
-          </div>
+            <button onclick="Adicionar('3')" class="button_banana" id="botao-produto-3">Adicionar</button>
+             <button onclick="diminuirQuantidade('produto-3')" class="button_minus">-</button>
+              <input type="text" id="quantidade-produto-3" class="input" value="0">
+              <button onclick="aumentarQuantidade('produto-3')" class="button_plus">+</button>
+            </div>
+
           <div class="caixa_texto">
             <img src="fotos/pão integral 12 grãos Pullmann.jpg" width="115%" height="150">
             <br>
-            <p>Pão integral 12 grãos Pullman 450g</p>
+            <p id="produto-4">Pão integral 12 grãos Pullman 450g</p>
             <span class="preco">R$ 15,89</span>
             <br>
-            <button onclick="Adicionar('Pão Integral 12 Grãos Pullman', 15.89)" class="button_banana">Adicionar</button>
-          </div>
+            <button onclick="Adicionar('4')" class="button_banana" id="botao-produto-4">Adicionar</button>
+             <button onclick="diminuirQuantidade('produto-4')" class="button_minus">-</button>
+              <input type="text" id="quantidade-produto-4" class="input" value="0">
+              <button onclick="aumentarQuantidade('produto-4')" class="button_plus">+</button>
+            </div>
+
           <div class="caixa_texto">
             <img src="fotos/Achocolatado-em-Po-2.0-370g-Nescau-105744.png" width="90%" height="150">
             <br>
-            <p>Achocolatado em Pó Nescau 370g</p>
+            <p id="produto-5">Achocolatado em Pó Nescau 370g</p>
             <span class="preco">R$ 10,90</span>
             <br>
-            <button onclick="Adicionar('Achocolatado em pó Nescau 370g', 10.90)" class="button_banana">Adicionar</button>
-          </div>
+            <button onclick="Adicionar('5')" class="button_banana" id="botao-produto-5">Adicionar</button>
+             <button onclick="diminuirQuantidade('produto-5')" class="button_minus">-</button>
+              <input type="text" id="quantidade-produto-5" class="input" value="0">
+              <button onclick="aumentarQuantidade('produto-5')" class="button_plus">+</button>
+            </div>
+
           <div class="caixa_texto">
             <img src="fotos/leite em pó ninho integral 380g.jpg" width="80%" height="150">
             <br>
-            <p>Leite em pó Ninho Integral 380g</p>
+            <p id="produto-6">Leite em pó Ninho Integral 380g</p>
             <span class="preco">R$ 14,00</span>
             <br>
-            <button onclick="Adicionar('Leite em Pó Ninho Integral 380g', 14.00)" class="button_banana">Adicionar</button>
-          </div>
+            <button onclick="Adicionar('6')" class="button_banana" id="botao-produto-6">Adicionar</button>
+             <button onclick="diminuirQuantidade('produto-6')" class="button_minus">-</button>
+              <input type="text" id="quantidade-produto-6" class="input" value="0">
+              <button onclick="aumentarQuantidade('produto-6')" class="button_plus">+</button>
+            </div>
+
           <div class="caixa_texto">
             <img src="fotos/cereal matinal crunch 230g.webp" width="100%" height="150">
             <br>
-            <p>Cereal Matinal Crunch 230g</p>
+            <p id="produto-7">Cereal Matinal Crunch 230g</p>
             <span class="preco">R$ 8,90</span>
             <br>
-            <button onclick="Adicionar('Cereal Matinal Crunch 230g', 8.90)" class="button_banana">Adicionar</button>
-          </div>
+            <button onclick="Adicionar('7')" class="button_banana" id="botao-produto-7">Adicionar</button> 
+            <button onclick="diminuirQuantidade('produto-7')" class="button_minus">-</button>
+            <input type="text" id="quantidade-produto-7" class="input" value="0">
+            <button onclick="aumentarQuantidade('produto-7')" class="button_plus">+</button>
+            </div>
+
           <div class="caixa_texto">
             <img src="fotos/Cereal-Matinal-Nescau-Caixa-210g.png" width="100%" height="150">
             <br>
-            <p>Cereal Matinal Nescau 210g</p>
+            <p id="produto-8">Cereal Matinal Nescau 210g</p>
             <span class="preco">R$ 7,00</span>
             <br>
-            <button onclick="Adicionar('Cereal Matinal Nescau 210g', 7.00)" class="button_banana">Adicionar</button>
-          </div>
+            <button onclick="Adicionar('8')" class="button_banana" id="botao-produto-8">Adicionar</button>
+             <button onclick="diminuirQuantidade('produto-8')" class="button_minus">-</button>
+              <input type="text" id="quantidade-produto-8" class="input" value="0">
+              <button onclick="aumentarQuantidade('produto-8')" class="button_plus">+</button>
+            </div>
+
           <div class="caixa_texto">
             <img src="fotos/leite integral italac.jpg" width="90%" height="150">
             <br>
-            <p>Leite Integral Italac 1L</p>
+            <p id="produto-9">Leite Integral Italac 1L</p>
             <span class="preco">R$ 2,50</span>
             <br>
-            <button onclick="Adicionar('Leite Integral Italac 1L', 2.50)" class="button_banana">Adicionar</button>
-          </div>
+            <button onclick="Adicionar('9')" class="button_banana" id="botao-produto-9">Adicionar</button>
+            <button onclick="diminuirQuantidade('produto-9')" class="button_minus">-</button>
+            <input type="text" id="quantidade-produto-9" class="input" value="0">
+            <button onclick="aumentarQuantidade('produto-9')" class="button_plus">+</button>
+            </div>
+
           <div class="caixa_texto">
             <img src="fotos/nata santa clara 300g.jpeg" width="100%" height="150">
             <br>
-            <p>Nata Santa Clara 300g</p>
+            <p id="produto-10">Nata Santa Clara 300g</p>
             <span class="preco">R$ 9,00</span>
             <br>
-            <button onclick="Adicionar('Nata Santa Clara 300g', 9.00)" class="button_banana">Adicionar</button>
-          </div>
+            <button onclick="Adicionar('10')" class="button_banana" id="botao-produto-10">Adicionar</button>
+             <button onclick="diminuirQuantidade('produto-10')" class="button_minus">-</button>
+              <input type="text" id="quantidade-produto-10" class="input" value="0">
+              <button onclick="aumentarQuantidade('produto-10')" class="button_plus">+</button>
+            </div>
+
           <div class="caixa_texto">
             <img src="fotos/manteiga extra com sal President Gastronomique 380g.webp" width="100%" height="150">
             <br>
-            <p>Manteiga Extra com Sal President Gastronomique 380g</p>
+            <p id="produto-11">Manteiga Extra com Sal President Gastronomique 380g</p>
             <span class="preco">R$ 14,00</span>
             <br>
-            <button onclick="Adicionar('Manteiga Extra Com Sal President Gastronomique 380g', 14.00)" class="button_banana">Adicionar</button>
-          </div>
+            <button onclick="Adicionar('11')" class="button_banana" id="botao-produto-11">Adicionar</button>
+             <button onclick="diminuirQuantidade('produto-11')" class="button_minus">-</button>
+              <input type="text" id="quantidade-produto-11" class="input" value="0">
+              <button onclick="aumentarQuantidade('produto-11')" class="button_plus">+</button>
+            </div>
+
           <div class="caixa_texto">
             <img src="fotos/torrada tradicional bauducco 142g.webp" width="100%" height="180">
             <br>
-            <p>Torrada Tradicional Bauducco 142g</p>
+            <p id="produto-12">Torrada Tradicional Bauducco 142g</p>
             <span class="preco">R$ 5,00</span>
             <br>
-            <button onclick="Adicionar('Torrada Tradicional Bauducco 142g', 5.00)" class="button_banana">Adicionar</button>
-          </div>
+            <button onclick="Adicionar('12')" class="button_banana" id="botao-produto-12">Adicionar</button>
+             <button onclick="diminuirQuantidade('produto-12')" class="button_minus">-</button>
+              <input type="text" id="quantidade-produto-12" class="input" value="0">
+              <button onclick="aumentarQuantidade('produto-12')" class="button_plus">+</button>
+            </div>
 
+            
 </body>
 <script>
  
