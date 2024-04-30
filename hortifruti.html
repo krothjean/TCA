@@ -7,31 +7,7 @@
     <script src="javaScript.js"></script>
     <title>Document</title>
 </head>
-<style>
-  .barra_navegacao_hortifruti{
-    overflow: hidden;
-    padding: 10px 20px;
-    text-align: center;
-  }
-  .barra_navegacao_hortifruti a{
-    float: left;
-  display: block;
-  color: #1f692b;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  text-align: center;
-  
-}
-.barra_navegacao_hortifruti a:hover{
-    background-color:rgb(241, 236, 236);
 
-
-    color: rgb(13, 63, 156);
-}
-
-
-</style>
 <body>
     <header>
     <div class="cabecalho ">
@@ -41,22 +17,29 @@
         <div class="barra_pesquisa">   
         <input type="text" placeholder="Search.." class="procura_padaria"  onkeyup="searchItems()">
         <ul class="produtos_padaria">
-          <li id="lista_item" class="lista_itens">Banana Prata</li>
-          <li id="lista_item" class="lista_itens">Batata Branca </li>
-          <li id="lista_item" class="lista_itens">Maçã Fuji</li>
-          <li id="lista_item" class="lista_itens">Cebola Branca</li>
-          <li id="lista_item" class="lista_itens">Tomate</li>
-          <li id="lista_item" class="lista_itens">Alface Crespa</li>
-          <li id="lista_item" class="lista_itens">Ovos Brancos</li>
-          <li id="lista_item" class="lista_itens">Mamão Papaia</li>
+          <li id="lista_item">Banana Prata</li>
+          <li id="lista_item">Batata Branca </li>
+          <li id="lista_item">Maçã Fuji</li>
+          <li id="lista_item">Cebola Branca</li>
+          <li id="lista_item">Tomate</li>
+          <li id="lista_item">Alface Crespa</li>
+          <li id="lista_item">Ovos Brancos</li>
+          <li id="lista_item">Mamão Papaia</li>
         </ul>
         </div>
-        <a href="carrinho_de_compras.html">
+        <!--<a href="carrinho_de_compras.html">//-->
+          <section class="carrinho-compra">
           <img id="carrinho" src="fotos/carrinho de compras.png" alt="Carrinho de compras">
-      </a>
+      <!--</a>//-->
+      <section class="produtos-carrinho" id="lista-de-produtos">
+        <section class="carrinho__produto__produtos">
+          <span class="texto"></span> <span class="texto"></span>
+        </section>
+        </section>
+      </section>
           </div>
         </header>  
-    <div class="barra_navegacao_hortifruti">
+    <div class="barra_navegacao">
         <button><a href="mercearia.html">Mercearia</button></a>
         <button><a href="acougue.html">Açougue</button></a>
         <button><a href="padaria.html">Padaria</button></a>
@@ -65,67 +48,106 @@
           <div class="fundo">
             <div class="caixa_texto">
                 <img src="fotos/banana.png" width="80%" height="150">
-                <p>Banana Prata</p>
-                <span class="preco">R$ 5,00 Kg</span>
+                <p id="produto-balanca-29">Cacho de Banana Prata de 4 à 6 un - 959g</p>
+                <span id="preco-produto-balanca-29">R$ 9,00 Kg </span>
                 <br>
-                <button onclick="Adicionar('Banana Prata', 5.00)" class="button_banana">Adicionar</button>
+                <button onclick="Adicionar2('29')" class="button_banana" id="botao-produto-29">Adicionar</button>
+              <button onclick="diminuirQuantidade('produto-29')" class="button_minus">-</button>
+              <input type="text" id="quantidade-produto-29" class="input" value="0">
+              <button onclick="aumentarQuantidade('produto-29')" class="button_plus">+</button>
+              <p>Uma unidade equivale à</p><span id="peso-produto-29">959g</span>
+              
             </div>
               
-          </div>
+          
           <div class="caixa_texto">
               <img src="fotos/batata.jpg" width="80%" height="150">
               <br>
-              <p>Batata Branca R$ 5,00 Kg</p>
+              <p id="produto-balanca-30">Batata Branca</p>
+              <span id="preco-produto-balanca-30">R$ 5,00 Kg</span>
               <br>
-              <button onclick="Adicionar('Batata Branca', 5.00)" class="button_banana">Adicionar</button>
+              <button onclick="Adicionar2('30')" class="button_banana" id="botao-produto-30">Adicionar</button>
+              <button onclick="diminuirQuantidade('produto-30')" class="button_minus">-</button>
+              <input type="text" id="quantidade-produto-30" class="input" value="0">
+              <button onclick="aumentarQuantidade('produto-30')" class="button_plus">+</button>
+              <br>
+              <p>Uma unidade equivale à</p><span id="peso-produto-30">264g</span>
           </div>
           <div class="caixa_texto">
             <img src="fotos/maca fuji.webp" width="80%" height="150">
             <br>
-            <p>Maçã Fuji</p>
-            <span class="preco">R$ 8,00 Kg</span>
+            <p id="produto-balanca-31">Maçã Fuji</p>
+            <span id="preco-produto-balanca-31">R$ 8,00 Kg</span>
             <br>
-            <button onclick="Adicionar('Maçã Fuji', 8.00)" class="button_banana">Adicionar</button>
+            <button onclick="Adicionar2('31')" class="button_banana" id="botao-produto-31">Adicionar</button>
+            <button onclick="diminuirQuantidade('produto-31')" class="button_minus">-</button>
+            <input type="text" id="quantidade-produto-31" class="input" value="0">
+            <button onclick="aumentarQuantidade('produto-31')" class="button_plus">+</button>
+            <br>
+            <p>Uma unidade equivale à</p><span id="peso-produto-31">188g</span>
           </div>
           <div class="caixa_texto">
             <img src="fotos/cebola branca.jpeg" width="80%" height="150">
             <br>
-            <p>Cebola Branca</p>
-            <span class="preco">R$ 4,00 Kg</span>
+            <p id="produto-balanca-32">Cebola Branca</p>
+            <span id="preco-produto-balanca-32">R$ 4,00 Kg</span>
             <br>
-            <button onclick="Adicionar('Cebola Branca', 4.00)" class="button_banana">Adicionar</button>
+            <button onclick="Adicionar2('32')" class="button_banana" id="botao-produto-32">Adicionar</button>
+              <button onclick="diminuirQuantidade('produto-32')" class="button_minus">-</button>
+              <input type="text" id="quantidade-produto-32" class="input" value="0">
+              <button onclick="aumentarQuantidade('produto-32')" class="button_plus">+</button>
+              <br>
+              <p>Uma unidade equivale à</p><span id="peso-produto-32">150g</span>
           </div>
           <div class="caixa_texto">
-            <img src="fotos/tomate.png" width="80%" height="150">
+            <img src="fotos/tomate.png" width="80%" height="110">
             <br>
-            <p>Tomate</p>
-            <span class="preco">R$ 10,49 Kg</span>
+            <p id="produto-balança-33">Tomate</p>
+            <span id="preco-produto-balanca-33">R$ 10,49 Kg</span>
             <br>
-            <button onclick="Adicionar('Tomate', 10.49)" class="button_banana">Adicionar</button>
+            <button onclick="Adicionar2('33')" class="button_banana" id="botao-produto-33">Adicionar</button>
+              <button onclick="diminuirQuantidade('produto-33')" class="button_minus">-</button>
+              <input type="text" id="quantidade-produto-33" class="input" value="0">
+              <button onclick="aumentarQuantidade('produto-33')" class="button_plus">+</button>
+              <br>
+              <p>Uma unidade equivale à</p><span id="peso-produto-33">145g</span>
           </div>
           <div class="caixa_texto">
             <img src="fotos/alface.jpeg" width="80%" height="150">
             <br>
-            <p>Alface Crespa</p>
-            <span class="preco">R$ 4,98 un</span>
+            <p id="produto-34">Alface Crespa</p>
+            <span id="preco-produto-34">R$ 4,98 un</span>
             <br>
-            <button onclick="Adicionar('Alface Crespa', 4.98)" class="button_banana">Adicionar</button>
+            <button onclick="Adicionar('34')" class="button_banana" id="botao-produto-34">Adicionar</button>
+              <button onclick="diminuirQuantidade('produto-34')" class="button_minus">-</button>
+              <input type="text" id="quantidade-produto-34" class="input" value="0">
+              <button onclick="aumentarQuantidade('produto-34')" class="button_plus">+</button>
+          
           </div>
           <div class="caixa_texto">
             <img src="fotos/OvosBrancosMedioNaturovos30Unidades.webp" width="80%" height="150">
             <br>
-            <p>Ovos Brancos Medio Naturovos 30 Unidades</p>
-            <span class="preco">R$ 22,90</span>
+            <p id="produto-35">Ovos Brancos Medio Naturovos 30 Unidades</p>
+            <span id="preco-produto-35">R$ 22,90</span>
             <br>
-            <button onclick="Adicionar('Ovos Brancos Medio Naturovos 30 unidades', 22.90)" class="button_banana">Adicionar</button>
+            <button onclick="Adicionar('35')" class="button_banana" id="botao-produto-35">Adicionar</button>
+              <button onclick="diminuirQuantidade('produto-35')" class="button_minus">-</button>
+              <input type="text" id="quantidade-produto-35" class="input" value="0">
+              <button onclick="aumentarQuantidade('produto-35')" class="button_plus">+</button>
           </div>
           <div class="caixa_texto">
             <img src="fotos/mamao papaia.webp" width="80%" height="150">
             <br>
-            <p>Mamão Papaia Inteiro</p>
-            <span class="preco">R$ 7,00</span>
+            <p id="produto-balanca-36">Mamão Papaia Inteiro</p>
+            <span id="preco-produto-balanca-36">R$ 7,00 Kg</span>
             <br>
-            <button onclick="Adicionar('Mamão papaia Inteiro', 7.00)" class="button_banana">Adicionar</button>
+            <button onclick="Adicionar2('36')" class="button_banana" id="botao-produto-36">Adicionar</button>
+              <button onclick="diminuirQuantidade('produto-36')" class="button_minus">-</button>
+              <input type="text" id="quantidade-produto-36" class="input" value="0">
+              <button onclick="aumentarQuantidade('produto-36')" class="button_plus">+</button>
+              <br>
+              <p>Uma unidade equivale à</p><span id="peso-produto-36">600g</span>
+              
           </div>
 </body>
 </html>

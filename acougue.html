@@ -19,7 +19,7 @@
         <div class="barra_pesquisa">    
           <input type="text" placeholder="Search.." class="procura_padaria"  onkeyup="searchItems()">
           
-               <ul id="produtos_padaria">
+               <ul class="produtos_padaria">
                 <li id="lista_item-13">Sobrecoxa de frango congelada Lar</li>
                 <li id="lista_item-14">Coração de Frango Congelado Frangosul</li>
                 <li id="lista_item-15">Bife de Coxão Mole Resfriado</li>
@@ -38,7 +38,7 @@
       </div>
       </header>
 
-      <div class="barra_navegacao_padaria">
+      <div class="barra_navegacao">
         <button><a href="mercearia.html">Mercearia</button></a>
         <button><a href="padaria.html">Padaria</button></a>
         <button><a href="hortifruti.html">Hortifruti</button></a>
@@ -48,7 +48,7 @@
             <div class="caixa_texto">
               <img src="fotos/sobrecoxa de frango congelada.webp" width="100%" height="150">
               <p id="produto-13">Sobrecoxa de frango congelada Lar</p>
-              <span id="preco">R$ 12,90</span>
+              <span id="preco-produto-13">R$ 12,90</span>
               <br>
               <button onclick="Adicionar('13')" class="button_banana" id="botao-produto-13">Adicionar</button>
               <button onclick="diminuirQuantidade('produto-13')" class="button_minus">-</button>
@@ -60,7 +60,7 @@
               <img src="fotos/coracao de frango congelado frangosul 1kg.webp" width="100%" height="150">
               <br>
               <p id="produto-14">Coração de Frango Congelado Frangosul 1kg</p>
-              <span class="preco">R$ 30,00</span>
+              <span id="preco-produto-14">R$ 30,00</span>
               <br>
               <button onclick="Adicionar('14')" class="button_banana" id="botao-produto-14">Adicionar</button>
                <button onclick="diminuirQuantidade('produto-14')" class="button_minus">-</button>
@@ -72,7 +72,7 @@
             <img src="fotos/bife de coxão mole.webp" width="80%" height="150">
             <br>
             <p id="produto-15">Bife de Coxão Mole Resfriado Novilho Jovem Zaffari </p>
-            <span class="preco">R$ 39,90</span>
+            <span id="preco-produto-15">R$ 39,90</span>
             <br>
             <button onclick="Adicionar('15')" class="button_banana" id="botao-produto-15">Adicionar</button>
              <button onclick="diminuirQuantidade('produto-15')" class="button_minus">-</button>
@@ -84,7 +84,7 @@
             <img src="fotos/alcatra bovina.webp" width="115%" height="150">
             <br>
             <p id="produto-16">Alcatra Bovina Pedaço Resfriado a Vácuo </p>
-            <span class="preco">R$ 45,00</span>
+            <span id="preco-produto-16">R$ 45,00</span>
             <br>
             <button onclick="Adicionar('16')" class="button_banana" id="botao-produto-16">Adicionar</button>
              <button onclick="diminuirQuantidade('produto-16')" class="button_minus">-</button>
@@ -96,7 +96,7 @@
             <img src="fotos/cane moida de acem bovino.webp" width="90%" height="150">
             <br>
             <p id="produto-17">Carne Moída de Acém Bovino Angus Carapreta Gran Selezione 400g </p>
-            <span class="preco">R$ 16,90</span>
+            <span id="preco-produto-17">R$ 16,90</span>
             <br>
             <button onclick="Adicionar('17')" class="button_banana" id="botao-produto-17">Adicionar</button>
              <button onclick="diminuirQuantidade('produto-17')" class="button_minus">-</button>
@@ -108,7 +108,7 @@
             <img src="fotos/entrecot suino resfriado.webp" width="80%" height="150">
             <br>
             <p id="produto-18">Entrecot Suíno Resfriado </p>
-            <span class="preco">R$ 25,90</span>
+            <span id="preco-produto-18">R$ 25,90</span>
             <br>
             <button onclick="Adicionar('18')" class="button_banana" id="botao-produto-18">Adicionar</button>
              <button onclick="diminuirQuantidade('produto-18')" class="button_minus">-</button>
@@ -120,7 +120,7 @@
             <img src="fotos/filezinho de frango sassami.webp" width="100%" height="150">
             <br>
             <p id="produto-19">Filezinho de Frango Sassami Congelado IQF Sadia 1kg </p>
-            <span class="preco">R$ 20,90</span>
+            <span id="preco-produto-19">R$ 20,90</span>
             <br>
             <button onclick="Adicionar('19')" class="button_banana" id="botao-produto-19">Adicionar</button> 
             <button onclick="diminuirQuantidade('produto-19')" class="button_minus">-</button>
@@ -132,7 +132,7 @@
             <img src="fotos/filé de tilapia.webp" width="100%" height="150">
             <br>
             <p id="produto-20">Filé de Tilapia Congelado Fantasia Di Mare 800g </p>
-            <span class="preco">R$ 41,90</span>
+            <span id="preco-produto-20">R$ 41,90</span>
             <br>
             <button onclick="Adicionar('20')" class="button_banana" id="botao-produto-20">Adicionar</button>
              <button onclick="diminuirQuantidade('produto-20')" class="button_minus">-</button>

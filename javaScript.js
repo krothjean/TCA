@@ -5,11 +5,34 @@ function Remover() {
 }
 var carrinho = []
 function Adicionar(id){
-let produto = document.getElementById('produto-' + id)
-alert(produto.textContent)
-let quantidade = document.getElementById('quantidade-produto-' + id).value
-alert(quantidade)
-let preco = documet.getElementById('preco')
+  let produto = document.getElementById('produto-' + id).textContent
+  
+  let quantidade = parseInt(document.getElementById('quantidade-produto-' + id).value)
+  
+  let preco = parseFloat(document.getElementById('preco-produto-' + id).textContent.replace('R$ ', '').replace(',', '.'));
+  
+  precoTotal = quantidade * preco
+ 
+  let carrinho = document.getElementById('lista-de-produtos')
+  carrinho.innerHTML = carrinho.innerHTML + `<section class="carrinho__produto__produtos">
+   <span class="texto">${quantidade}x</span>${produto} <span class="texto">${precoTotal}</span>
+   </section>`
+}
+function Adicionar2(id){
+  let produtoHortifruti = document.getElementById('produto-balanca-' + id).textContent;
+  let quantidadeAdicionada = parseInt(document.getElementById('quantidade-produto-' + id).value);
+  let peso = parseFloat(document.getElementById('peso-produto-' + id).textContent)
+  peso = quantidadeAdicionada * peso
+  let precoProduto = parseFloat(document.getElementById('preco-produto-balanca-' + id).textContent.replace('R$', ''));
+  
+  // Cálculo do peso total
+  let total = (peso * precoProduto) / 1000;
+  let carrinho = document.getElementById('lista-de-produtos')
+  carrinho.innerHTML = carrinho.innerHTML + `<section class="carrinho__produto__produtos">
+   <span class="texto">${quantidadeAdicionada}x</span>${produtoHortifruti} <span class="texto">${total}</span>
+   </section>`
+  // Exibição dos resultados em alertas
+  
 }
   
 function diminuirQuantidade(produtoId) {

@@ -44,8 +44,6 @@ body{
   flex-direction: row;
   justify-content: space-between;
 }
-
-
 .esquilo{
   height: 80px;
   background-color: #801717 ;
@@ -148,28 +146,6 @@ body{
   height: 80px;
   margin-top: 20px;
 }
-
-.barra_navegacao_padaria{
-    
-  overflow: hidden;
-  padding: 10px 20px;
-  text-align: center;
-}
-.barra_navegacao_padaria a{
-  float: left;
-display: block;
-color: #1f692b;
-text-align: center;
-padding: 14px 16px;
-text-decoration: none;
-text-align: center;
-
-}
-.barra_navegacao_padaria a:hover{
-  background-color:rgb(241, 236, 236);
-  color: rgb(13, 63, 156);
-}
-
 .produtos_padaria{
 display: none;
 }
