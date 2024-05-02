@@ -27,13 +27,12 @@
           <li id="lista_item">Mamão Papaia</li>
         </ul>
         </div>
-        <!--<a href="carrinho_de_compras.html">//-->
           <section class="carrinho-compra">
           <img id="carrinho" src="fotos/carrinho de compras.png" alt="Carrinho de compras">
-      <!--</a>//-->
       <section class="produtos-carrinho" id="lista-de-produtos">
         <section class="carrinho__produto__produtos">
-          <span class="texto"></span> <span class="texto"></span>
+          <span id="quantidade"></span> <span id="nome-produto"> </span> <span id="preco"> </span>
+          <button class="remover" onclick="Remover()">Remover</button>
         </section>
         </section>
       </section>
@@ -48,8 +47,8 @@
           <div class="fundo">
             <div class="caixa_texto">
                 <img src="fotos/banana.png" width="80%" height="150">
-                <p id="produto-balanca-29">Cacho de Banana Prata de 4 à 6 un - 959g</p>
-                <span id="preco-produto-balanca-29">R$ 9,00 Kg </span>
+                <p id="produto-balanca-29">Cacho de Banana Prata</p>
+                <span id="preco-produto-balanca-29">R$ 6,00 Kg </span>
                 <br>
                 <button onclick="Adicionar2('29')" class="button_banana" id="botao-produto-29">Adicionar</button>
               <button onclick="diminuirQuantidade('produto-29')" class="button_minus">-</button>

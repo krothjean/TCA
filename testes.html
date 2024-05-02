@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="style.css">
     <script src="javaScript.js"></script>
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 
 <body>
@@ -19,8 +20,8 @@
           <input type="text" placeholder="Search.." class="procura_padaria"  onkeyup="searchItems()">
           
                <ul id="produtos_padaria">
-                <li id="lista_item-1">Cacetinho</li>
-                <li id="lista_item-2">Pão Caseiro de Milho</li>
+                <li id="produtos_padaria-1">Cacetinho</li>
+                <li id="produtos_padaria-2">Pão Caseiro de Milho</li>
                 <li id="lista_item-3">Pão de Forma sem Glúten</li>
                 <li id="lista_item-4">Pão Integral 12 Grãos Pullman</li>
                 <li id="lista_item-5">Achocolatado em Pó Nescau</li>
@@ -33,14 +34,14 @@
                 <li id="lista_item-12">Torrada Tradicional Bauducco</li>
             </ul>    
           </div>
-          <section class="carrinho-compra">
-          <img id="carrinho" src="fotos/carrinho de compras.png" alt="Carrinho de compras">
-          <section class="produtos-carrinho" id="lista-de-produtos">
-          <section class="carrinho__produto__produtos">
-            <span class="texto"></span> <span class="texto"></span>
-          </section>
-          </section>
-        </section>
+          <ul class="barra-lateral-carrinho">
+            <li class="lista-itens">
+              <a href="#">
+                <i class="bi bi-cart"></i>
+              </a>
+            </li>
+          </ul>
+        </a>
       </div>
       </header>
 
@@ -52,9 +53,9 @@
         
           <div class="fundo">
             <div class="caixa_texto">
-              <img src="fotos/PAO-DE-SANDUICHE-FORMA.png" width="100%" height="150">
-              <p id="produto-1">Pão de Sanduiche Forma Seven Boys 450g </p>
-              <span id="preco">R$ 6,50</span>
+              <img src="fotos/cacetinho.jpg" width="100%" height="150">
+              <p id="produto-1">Cacetinho</p>
+              <span class="preco">R$ 10,00 Kg</span>
               <br>
               <button onclick="Adicionar('1')" class="button_banana" id="botao-produto-1">Adicionar</button>
               <button onclick="diminuirQuantidade('produto-1')" class="button_minus">-</button>

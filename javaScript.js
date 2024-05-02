@@ -1,9 +1,5 @@
-function Remover() {
-  let quantidadeProduto = document.querySelector('.produto_quantidade').value;
-  let subtração = quantidadeProduto - 1
-  
-}
-var carrinho = []
+let totalGeral = 0
+
 function Adicionar(id){
   let produto = document.getElementById('produto-' + id).textContent
   
@@ -14,9 +10,10 @@ function Adicionar(id){
   precoTotal = quantidade * preco
  
   let carrinho = document.getElementById('lista-de-produtos')
-  carrinho.innerHTML = carrinho.innerHTML + `<section class="carrinho__produto__produtos">
-   <span class="texto">${quantidade}x</span>${produto} <span class="texto">${precoTotal}</span>
+  carrinho.innerHTML = carrinho.innerHTML + `<section class="carrinho__produto__${id}produtos">
+   <span class="texto">${quantidade}x</span>${produto}<span class="texto">${precoTotal}</span>
    </section>`
+   totalGeral = totalGeral + precoTotal
 }
 function Adicionar2(id){
   let produtoHortifruti = document.getElementById('produto-balanca-' + id).textContent;
@@ -31,19 +28,28 @@ function Adicionar2(id){
   carrinho.innerHTML = carrinho.innerHTML + `<section class="carrinho__produto__produtos">
    <span class="texto">${quantidadeAdicionada}x</span>${produtoHortifruti} <span class="texto">${total}</span>
    </section>`
-  // Exibição dos resultados em alertas
-  
 }
+//function Remover(id){
+  //recuperando a quantidade de determinado produto que foi adicionado no carrinho 
+  //let quantidadeDigitada = document.getElementById('quantidade-' + id)
+  //let quantidade = parseInt(quantidadeDigitada.value)
+  //quantidade = 
+
+//}
   
 function diminuirQuantidade(produtoId) {
-  // Obter o elemento de quantidade específico para o produto
-  let quantidadeInput = document.getElementById('quantidade-' + produtoId);
-  // Obter o valor atual da quantidade
-  let quantidade = parseInt(quantidadeInput.value);
-  // Diminuir a quantidade em 1, garantindo que não seja menor que 1
-  quantidade = Math.max(quantidade - 1, 0);
-  // Atualizar o valor do campo de quantidade
-  quantidadeInput.value = quantidade;
+   // Obter o elemento de quantidade específico para o produto
+   let quantidadeInput = document.getElementById('quantidade-' + produtoId);
+   // Obter o valor atual da quantidade
+   let quantidade = parseInt(quantidadeInput.value);
+   // Certifique-se de que a quantidade não seja menor que zero
+   quantidade = Math.max(quantidade - 1, 0);
+   // Atualizar o valor do campo de quantidade
+   quantidadeInput.value = quantidade;
+   
+   // Atualizar a quantidade adicionada no carrinho
+   let quantidadeAdicionada = parseInt(carrinho.dataset.quantidadeAdicionada);
+   carrinho.dataset.quantidadeAdicionada = Math.max(quantidadeAdicionada - 1, 0);
 }
   function aumentarQuantidade(produtoId) {
       // Obter o elemento de quantidade específico para o produto

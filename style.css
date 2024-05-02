@@ -39,11 +39,7 @@ body{
 
     color: rgb(13, 63, 156);
 }
-.img_fruteira{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
+
 .esquilo{
   height: 80px;
   background-color: #801717 ;
@@ -135,16 +131,9 @@ body{
   text-shadow: 2px 2px 4px #000000;
   
 }
-.button_carrinho{
-  height: 80px;
-  background-color:#cbcecf;
-  width:80px ;
-  border: none;
-  margin-top: 10px;
-}
+
 #carrinho{
-  height: 80px;
-  margin-top: 20px;
+  height: 40px; 
 }
 .produtos_padaria{
 display: none;
@@ -165,22 +154,20 @@ padding: 0px;
 li{
 padding: 5px;
 margin: 0px;
-background: #d3d3d3;
-width: 200px;
-border: 1px solid white;
+background: #801717;
+width: 30px;
+border: 1px solid #801717;
+list-style-type: none;
 }
 .lista__item{
   margin: 10px 0 10px 0;
   font-size: 20px;
   text-shadow: 5px 5px #000000;
 }
-.preco{
+/*.preco{
   margin-left: 25px;
   font-family: "Raleway", sans-serif;
   font-weight: bold;
-}
-/*.carrinho_de_compras{
-  width: 100%;
 }*/
 .carrinho-item-coluna{
   position: relative;
@@ -210,3 +197,10 @@ border: 1px solid white;
    width: 40px;
    text-align: center;
   }
+ .remover{
+  background-color: rgb(21, 97, 24);
+  border: 1px solid rgb(21, 97, 24);
+  border-radius: 5px;
+  font-size: 12px;
+  color: #ccc;
+ }
