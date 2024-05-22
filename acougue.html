@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <script src="javaScript.js"></script>
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 
 <body>
@@ -14,28 +15,110 @@
     <div class="cabecalho ">
         <img class="esquilo" src="fotos/imagem zaffari.png" alt="Imagem 1">
         <h1 class="titulo">Açougue</h1>
-        
-       
         <div class="barra_pesquisa">    
-          <input type="text" placeholder="Search.." class="procura_padaria"  onkeyup="searchItems()">
+          <input onkeyup="searchItems()" type="text" placeholder="Do que precisa?" id="procura_padaria">
           
-               <ul class="produtos_padaria">
-                <li id="lista_item-13">Sobrecoxa de frango congelada Lar</li>
-                <li id="lista_item-14">Coração de Frango Congelado Frangosul</li>
-                <li id="lista_item-15">Bife de Coxão Mole Resfriado</li>
-                <li id="lista_item-16">Alcatra Bovina</li>
-                <li id="lista_item-17">Carne Moída de Acém Bovino </li>
-                <li id="lista_item-18">Entrecot Suíno Resfriado</li>
-                <li id="lista_item-19">Filezinho de Frango Sassami Congelado</li>
-                <li id="lista_item-20">Filé de Tilapia Congelado</li>
+               <ul id="lista_produtos">
+                <li>
+                <a href="#">
+                <img src="fotos/sobrecoxa de frango congelada.webp" height="40px" width="40px">
+                <span class="item_lista"> Sobrecoxa de frango congelada Lar</span>
+                </a>
+               </li>
+
+                <li>
+               <a href="#">
+               <img src="fotos/coracao de frango congelado frangosul 1kg.webp" height="40px" width="40px">
+               <span class="item_lista">Coração de Frango Congelado Frangosul</span>
+                </a> 
+              </li>
+
+                <li>
+              <a href="#">
+                <img src="fotos/bife de coxão mole.webp" height="40px" width="40px">
+                <span class="item_lista">Bife de Coxão Mole Resfriado</span>
+
+                </a> 
+              </li>
+
+                <li>
+               <a href="#">
+                <img src="fotos/alcatra bovina.webp" height="40px" width="40px">
+                <span class="item_lista"> Alcatra Bovina</span>
+              </a> 
+              </li>
+
+                <li>
+                <a href="#">
+                  <img src="fotos/cane moida de acem bovino.webp" height="40px" width="40px">
+                  <span class="item_lista">Carne Moída de Acém Bovino</span>
+
+                </a> 
+               </li>
+
+                <li>
+                <a href="#">
+                 <img src="fotos/entrecot suino resfriado.webp" height="40px" width="40px">
+                 <span class="item_lista">Entrecot Suíno Resfriado</span>
+                </a> 
+              </li>
+
+                <li>
+                <a href="#">
+                 <img src="fotos/filezinho de frango sassami.webp" height="40px" width="40px">
+                 <span class="item_lista">Filezinho de Frango Sassami Congelado</span>
+                </a> 
+              </li>
+
+                <li>
+                <a href="#">
+                  <img src="fotos/filé de tilapia.webp" height="40px" width="40px">
+                  <span class="item_lista">Filé de Tilapia Congelado</span>
+
+                </a> 
+              </li>
+
                 
             </ul>    
+        <button onclick="expandirCarrinho()" id="cartButton">
+          <img id="carrinho" src="fotos/carrinho de compras.png" alt="Carrinho">
+      </button>
+      <div id="sideMenu" class="side-menu">
+        <button onclick="fecharMenu()" id="fecharMenu"><i class="bi bi-x-lg"></i></button>
+
+          <!-- Conteúdo do menu lateral -->
+          <h2>Seu Carrinho</h2>
+         
+          <section class="carrinho-compra">
+            <section class="produtos-carrinho" id="lista-de-produtos">
+            <section class="carrinho__produto__produtos">
+              <span class="texto"></span> <span class="texto"></span>
+             
+             
+            </section>
+            </section>
+              </section>
+              <p class="precoTotal">
+                Total: <span class="texto" id="PrecoTotal"></span>
+              </p>
+              
+             
+              <a href="nota_fiscal.html"><button onclick="finalizarCompra()" id="finalizarCompra">Finalizar Compra</a></button>
+              <button id="remover" onclick="remover()">Remover<span class="texto"></span> <span class="texto"></span></button>
+              
+        
+       
+        
           </div>
-          <ul class="barra-lateral-carrinho">
-            <li class="lista">
-              <a href="carrinho de compras.png"></a>
-            </li>
-          </ul>
+          <section class="carrinho-compra">
+         
+        <section class="produtos-carrinho" id="lista-de-produtos">
+        <section class="carrinho__produto__produtos">
+          <span class="texto"></span> <span class="texto"></span>
+        </section>
+        </section>
+          </section>
+        </div>
       </div>
       </header>
 
@@ -53,7 +136,7 @@
               <br>
               <button onclick="Adicionar('13')" class="button_banana" id="botao-produto-13">Adicionar</button>
               <button onclick="diminuirQuantidade('produto-13')" class="button_minus">-</button>
-              <input type="text" id="quantidade-produto-13" class="input" value="0">
+              <input type="text" id="quantidade-produto-13" class="input_quantidade" value="0">
               <button onclick="aumentarQuantidade('produto-13')" class="button_plus">+</button>
           </div>
 
@@ -65,7 +148,7 @@
               <br>
               <button onclick="Adicionar('14')" class="button_banana" id="botao-produto-14">Adicionar</button>
                <button onclick="diminuirQuantidade('produto-14')" class="button_minus">-</button>
-              <input type="text" id="quantidade-produto-14" class="input" value="0">
+              <input type="text" id="quantidade-produto-14" class="input_quantidade" value="0">
               <button onclick="aumentarQuantidade('produto-14')" class="button_plus">+</button>
             </div>
 
@@ -77,7 +160,7 @@
             <br>
             <button onclick="Adicionar('15')" class="button_banana" id="botao-produto-15">Adicionar</button>
              <button onclick="diminuirQuantidade('produto-15')" class="button_minus">-</button>
-              <input type="text" id="quantidade-produto-15" class="input" value="0">
+              <input type="text" id="quantidade-produto-15" class="input_quantidade" value="0">
               <button onclick="aumentarQuantidade('produto-15')" class="button_plus">+</button>
             </div>
 
@@ -89,7 +172,7 @@
             <br>
             <button onclick="Adicionar('16')" class="button_banana" id="botao-produto-16">Adicionar</button>
              <button onclick="diminuirQuantidade('produto-16')" class="button_minus">-</button>
-              <input type="text" id="quantidade-produto-16" class="input" value="0">
+              <input type="text" id="quantidade-produto-16" class="input_quantidade" value="0">
               <button onclick="aumentarQuantidade('produto-16')" class="button_plus">+</button>
             </div>
 
@@ -101,7 +184,7 @@
             <br>
             <button onclick="Adicionar('17')" class="button_banana" id="botao-produto-17">Adicionar</button>
              <button onclick="diminuirQuantidade('produto-17')" class="button_minus">-</button>
-              <input type="text" id="quantidade-produto-17" class="input" value="0">
+              <input type="text" id="quantidade-produto-17" class="input_quantidade" value="0">
               <button onclick="aumentarQuantidade('produto-17')" class="button_plus">+</button>
             </div>
 
@@ -113,7 +196,7 @@
             <br>
             <button onclick="Adicionar('18')" class="button_banana" id="botao-produto-18">Adicionar</button>
              <button onclick="diminuirQuantidade('produto-18')" class="button_minus">-</button>
-              <input type="text" id="quantidade-produto-18" class="input" value="0">
+              <input type="text" id="quantidade-produto-18" class="input_quantidade" value="0">
               <button onclick="aumentarQuantidade('produto-18')" class="button_plus">+</button>
             </div>
 
@@ -125,7 +208,7 @@
             <br>
             <button onclick="Adicionar('19')" class="button_banana" id="botao-produto-19">Adicionar</button> 
             <button onclick="diminuirQuantidade('produto-19')" class="button_minus">-</button>
-            <input type="text" id="quantidade-produto-19" class="input" value="0">
+            <input type="text" id="quantidade-produto-19" class="input_quantidade" value="0">
             <button onclick="aumentarQuantidade('produto-19')" class="button_plus">+</button>
             </div>
 
@@ -137,7 +220,7 @@
             <br>
             <button onclick="Adicionar('20')" class="button_banana" id="botao-produto-20">Adicionar</button>
              <button onclick="diminuirQuantidade('produto-20')" class="button_minus">-</button>
-              <input type="text" id="quantidade-produto-20" class="input" value="0">
+              <input type="text" id="quantidade-produto-20" class="input_quantidade" value="0">
               <button onclick="aumentarQuantidade('produto-20')" class="button_plus">+</button>
             </div>
             

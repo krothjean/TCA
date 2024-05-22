@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="style.css">
     <script src="javaScript.js"></script>
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 
 <body>
@@ -15,28 +16,87 @@
         <h1 class="titulo">Hortifruti</h1>
         
         <div class="barra_pesquisa">   
-        <input type="text" placeholder="Search.." class="procura_padaria"  onkeyup="searchItems()">
-        <ul class="produtos_padaria">
-          <li id="lista_item">Banana Prata</li>
-          <li id="lista_item">Batata Branca </li>
-          <li id="lista_item">Maçã Fuji</li>
-          <li id="lista_item">Cebola Branca</li>
-          <li id="lista_item">Tomate</li>
-          <li id="lista_item">Alface Crespa</li>
-          <li id="lista_item">Ovos Brancos</li>
-          <li id="lista_item">Mamão Papaia</li>
+          <input onkeyup="searchItems()" type="text" placeholder="Do que precisa?" id="procura_padaria">
+        <ul id="lista_produtos">
+          <li>
+            <a href="#">
+              <img src="fotos/banana.png" height="40px" width="40px">
+              <span> Banana Prata</span>
+            </a>
+ 
+           </li>
+          <li>
+           <a href="#">
+            <img src="fotos/batata.jpg" height="40px" width="40px">
+            <span> Batata Branca</span>
+           </a> 
+            </li>
+          <li>
+           <a href="#">
+            <img src="fotos/maca fuji.webp" height="40px" width="40px">
+            <span>Maçã Fuji</span>
+           </a> 
+            </li>
+          <li>
+            <a href="#">
+              <img src="fotos/cebola branca.jpeg" height="40px" width="40px">
+              <span> Cebola Branca</span>
+            </a>
+           </li>
+          <li>
+            <a href="#">
+              <img src="fotos/tomate.png" height="40px" width="40px">
+              <span>Tomate</span>
+            </a>
+            </li>
+          <li>
+            <a href="#">
+              <img src="fotos/alface.jpeg" height="40px" width="40px">
+              <span>Alface Crespa</span>
+            </a>
+            </li>
+          <li>
+            <a href="#">
+              <img src="fotos/OvosBrancosMedioNaturovos30Unidades.webp" height="40px" width="40px">
+              <span> Ovos Brancos</span>
+            </a>
+           </li>
+          <li>
+            <a href="#">
+              <img src="fotos/mamao papaia.webp" height="40px" width="40px">
+              <span>Mamão Papaia</span>
+            </a>
+            </li>
         </ul>
-        </div>
+       
+        <button onclick="expandirCarrinho()" id="cartButton">
+          <img id="carrinho" src="fotos/carrinho de compras.png" alt="Carrinho">
+      </button>
+      <div id="sideMenu" class="side-menu">
+        <button onclick="fecharMenu()" id="fecharMenu"><i class="bi bi-x-lg"></i></button>
+
+          <!-- Conteúdo do menu lateral -->
+          <h2>Seu Carrinho</h2>
+         
           <section class="carrinho-compra">
-          <img id="carrinho" src="fotos/carrinho de compras.png" alt="Carrinho de compras">
-      <section class="produtos-carrinho" id="lista-de-produtos">
-        <section class="carrinho__produto__produtos">
-          <span id="quantidade"></span> <span id="nome-produto"> </span> <span id="preco"> </span>
-          <button class="remover" onclick="Remover()">Remover</button>
-        </section>
-        </section>
-      </section>
+            <section class="produtos-carrinho" id="lista-de-produtos">
+            <section class="carrinho__produto__produtos">
+              <span class="texto"></span> <span class="texto"></span>
+             
+             
+            </section>
+            </section>
+              </section>
+              <p class="precoTotal">
+                Total: <span class="texto" id="PrecoTotal"></span>
+              </p>
+              <a href="nota_fiscal.html"><button onclick="finalizarCompra()" id="finalizarCompra">Finalizar Compra</a></button>
+              <button id="remover" onclick="remover()">Remover<span class="texto"></span> <span class="texto"></span></button>
+
+              
+            </div>
           </div>
+    </div>
         </header>  
     <div class="barra_navegacao">
         <button><a href="mercearia.html">Mercearia</button></a>
@@ -47,12 +107,12 @@
           <div class="fundo">
             <div class="caixa_texto">
                 <img src="fotos/banana.png" width="80%" height="150">
-                <p id="produto-balanca-29">Cacho de Banana Prata</p>
-                <span id="preco-produto-balanca-29">R$ 6,00 Kg </span>
+                <p id="produto-balanca-29">Cacho de Banana Prata de 4 à 6 un - 959g</p>
+                <span id="preco-produto-balanca-29">R$ 9,00 Kg </span>
                 <br>
                 <button onclick="Adicionar2('29')" class="button_banana" id="botao-produto-29">Adicionar</button>
               <button onclick="diminuirQuantidade('produto-29')" class="button_minus">-</button>
-              <input type="text" id="quantidade-produto-29" class="input" value="0">
+              <input type="text" id="quantidade-produto-29" class="input_quantidade" value="0">
               <button onclick="aumentarQuantidade('produto-29')" class="button_plus">+</button>
               <p>Uma unidade equivale à</p><span id="peso-produto-29">959g</span>
               
@@ -67,7 +127,7 @@
               <br>
               <button onclick="Adicionar2('30')" class="button_banana" id="botao-produto-30">Adicionar</button>
               <button onclick="diminuirQuantidade('produto-30')" class="button_minus">-</button>
-              <input type="text" id="quantidade-produto-30" class="input" value="0">
+              <input type="text" id="quantidade-produto-30" class="input_quantidade" value="0">
               <button onclick="aumentarQuantidade('produto-30')" class="button_plus">+</button>
               <br>
               <p>Uma unidade equivale à</p><span id="peso-produto-30">264g</span>
@@ -80,7 +140,7 @@
             <br>
             <button onclick="Adicionar2('31')" class="button_banana" id="botao-produto-31">Adicionar</button>
             <button onclick="diminuirQuantidade('produto-31')" class="button_minus">-</button>
-            <input type="text" id="quantidade-produto-31" class="input" value="0">
+            <input type="text" id="quantidade-produto-31" class="input_quantidade" value="0">
             <button onclick="aumentarQuantidade('produto-31')" class="button_plus">+</button>
             <br>
             <p>Uma unidade equivale à</p><span id="peso-produto-31">188g</span>
@@ -93,7 +153,7 @@
             <br>
             <button onclick="Adicionar2('32')" class="button_banana" id="botao-produto-32">Adicionar</button>
               <button onclick="diminuirQuantidade('produto-32')" class="button_minus">-</button>
-              <input type="text" id="quantidade-produto-32" class="input" value="0">
+              <input type="text" id="quantidade-produto-32" class="input_quantidade" value="0">
               <button onclick="aumentarQuantidade('produto-32')" class="button_plus">+</button>
               <br>
               <p>Uma unidade equivale à</p><span id="peso-produto-32">150g</span>
@@ -106,7 +166,7 @@
             <br>
             <button onclick="Adicionar2('33')" class="button_banana" id="botao-produto-33">Adicionar</button>
               <button onclick="diminuirQuantidade('produto-33')" class="button_minus">-</button>
-              <input type="text" id="quantidade-produto-33" class="input" value="0">
+              <input type="text" id="quantidade-produto-33" class="input_quantidade" value="0">
               <button onclick="aumentarQuantidade('produto-33')" class="button_plus">+</button>
               <br>
               <p>Uma unidade equivale à</p><span id="peso-produto-33">145g</span>
@@ -119,7 +179,7 @@
             <br>
             <button onclick="Adicionar('34')" class="button_banana" id="botao-produto-34">Adicionar</button>
               <button onclick="diminuirQuantidade('produto-34')" class="button_minus">-</button>
-              <input type="text" id="quantidade-produto-34" class="input" value="0">
+              <input type="text" id="quantidade-produto-34" class="input_quantidade" value="0">
               <button onclick="aumentarQuantidade('produto-34')" class="button_plus">+</button>
           
           </div>
@@ -131,7 +191,7 @@
             <br>
             <button onclick="Adicionar('35')" class="button_banana" id="botao-produto-35">Adicionar</button>
               <button onclick="diminuirQuantidade('produto-35')" class="button_minus">-</button>
-              <input type="text" id="quantidade-produto-35" class="input" value="0">
+              <input type="text" id="quantidade-produto-35" class="input_quantidade" value="0">
               <button onclick="aumentarQuantidade('produto-35')" class="button_plus">+</button>
           </div>
           <div class="caixa_texto">
@@ -142,7 +202,7 @@
             <br>
             <button onclick="Adicionar2('36')" class="button_banana" id="botao-produto-36">Adicionar</button>
               <button onclick="diminuirQuantidade('produto-36')" class="button_minus">-</button>
-              <input type="text" id="quantidade-produto-36" class="input" value="0">
+              <input type="text" id="quantidade-produto-36" class="input_quantidade" value="0">
               <button onclick="aumentarQuantidade('produto-36')" class="button_plus">+</button>
               <br>
               <p>Uma unidade equivale à</p><span id="peso-produto-36">600g</span>
