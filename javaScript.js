@@ -38,18 +38,25 @@ function Adicionar2(id){
    totalCompra.textContent = totalGeral.toFixed(2);
   
 }
-function remover(id){
+function remover(){
+   
   // Obtém o texto da lista de produtos
-let lista_produtos = document.getElementById('lista-de-produtos').textContent;
-lista_produtos.length = 36;
-let produtoCarrinho = document.getElementById('lista-de-produtos').textContent
-produtoCarrinho.length = 1;
+let lista_produtos = document.getElementById('lista-de-produtos');
+lista_produtos.innerHTML= "";
+
+let totalCompra = document.getElementById('PrecoTotal');
+totalCompra.innerHTML = "";
+   
+
+
+
+
 // Verifica a quantidade de produtos na lista
-if (lista_produtos.length > 1) {
-  alert(`Você deseja remover estes produtos? ${lista_produtos}`)  
-} else {
-  alert(`Você deseja remover este produto? ${produtoCarrinho}` )
-}
+// if (lista_produtos +  produtoCarrinho) {
+//   alert(`Você deseja remover estes produtos? ${lista_produtos}`)  
+// } else {
+//   alert(`Você deseja remover este produto? ${produtoCarrinho}` )
+// }
 } 
 function diminuirQuantidade(produtoId) {
   // Obter o elemento de quantidade específico para o produto
@@ -132,15 +139,22 @@ function searchItems() {
                   }
                  )
                  function expandirCarrinho(){
-                 document.getElementById('cartButton').addEventListener('click', function() {
+                 document.getElementById('cartButton').addEventListener('click', function(){
+                 })
                   let sideMenu = document.getElementById('sideMenu');
                   if (sideMenu.style.width === '250px') {
                       sideMenu.style.width = '0';
-                  } else {
+                    } else {
                       sideMenu.style.width = '350px';
                   }
-              });
-            }
+                        
+                      
+                        
+                      }
+                    
+                  
+              
+            
               function fecharMenu(){
               let fecharMenu = document.getElementById('sideMenu')
               fecharMenu.style.width = '0'   

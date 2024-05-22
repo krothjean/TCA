@@ -32,7 +32,10 @@ body{
   width: 30px;
   background-color:#801717;
   margin-right: 30px;
+ 
 }
+
+
 input{
 width: 400px;
 height: 30px;
@@ -68,7 +71,9 @@ li{
     background-color: transparent;
     border: none;
     cursor: pointer;
+    
 }
+
 
 .side-menu {
   height: 100%;
