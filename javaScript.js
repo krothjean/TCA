@@ -125,7 +125,7 @@ function Search(){
       if(!x[i].innerHTML.toLowerCase().includes(input)){
           x[i].style.display  = "none"
       }else{
-          x[i].style.display = "item_lista"
+          x[i].style.display = "block"
       }
   }
 
@@ -174,5 +174,25 @@ document.addEventListener('click', function(event) {
      }
      }
     )
-
-             
+  
+  function apagarProduto() {
+    let barra = document.getElementById('procura');
+    let itemDigitado = barra.value.trim().toLowerCase();
+  
+    if (itemDigitado === '') {
+      alert('Por favor, digite o nome do produto.');
+      return;
+    }
+  
+    let listaProdutos = document.querySelectorAll('li .item_lista');
+  
+    listaProdutos.forEach((item) => {
+      let nomeProduto = item.querySelector('li').textContent.trim().toLowerCase();
+      if (nomeProduto === itemDigitado) {
+        item.remove();
+        itemEncontrado = true;
+      }
+    });
+  
+    barra.value = '';
+  }           
