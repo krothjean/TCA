@@ -17,84 +17,85 @@
         
        
         <div class="barra_pesquisa">    
-          <input onkeyup="searchItems()" type="text" placeholder="Do que precisa?" id="procura_padaria">
+          <input onkeyup="searchItems()" type="text" placeholder="Do que precisa?" id="procura">
+          <button onclick="apagarProduto()" id="apagarProduto">x</button>
                <ul id="lista_produtos">
-                <li>
+                <li class = "item_lista">
                   <a href="#">
                     <img src="fotos/PAO-DE-SANDUICHE-FORMA.png" height="40px" width="40px">
-                  <span class="item_lista">Pão de Sanduiche Forma Seven Boys 450g</span>
+                  <span>Pão de Sanduiche Forma Seven Boys 450g</span>
                 </a>
               </li>
-                <li>
+                <li class = "item_lista">
                   <a href="#">
                   <img src="fotos/pão caseiro de milho.jpg" height="40px" width="40px">
-                  <span class="item_lista">Pão Caseiro de Milho</span>
+                  <span>Pão Caseiro de Milho</span>
                   </a>
                 </li>
-                 <li>
+                 <li class = "item_lista">
                  <a href="#">
                   <img src="fotos/pão de forma sem Gluten.webp" height="40px" width="40px">
-                  <span class="item_lista">Pão de Forma sem Glúten</span>
+                  <span>Pão de Forma sem Glúten</span>
                  </a>
                 </li>
-                <li>
+                <li class = "item_lista">
                     <a href="#">
                       <img src="fotos/pão integral 12 grãos Pullmann.jpg" height="40px" width="40px">
-                      <span class="item_lista">Pão Integral 12 Grãos Pullman</span>
+                      <span>Pão Integral 12 Grãos Pullman</span>
                     </a>
                  
                 </li>
-                <li>
+                <li class = "item_lista">
                   <a href="#">
-                    <img src="fotos/AchocolatadoemPo370gNescau1.webp" height="40px" width="40px">
-                    <span class="item_lista">Achocolatado em Pó Nescau</span>
+                    <img src="fotos/Achocolatado-em-Po-2.0-370g-Nescau-105744.png" height="40px" width="40px">
+                    <span>Achocolatado em Pó Nescau</span>
                   </a>
                 </li>
-                <li>
+                <li class = "item_lista">
                   <a href="#">
                     <img src="fotos/leite em Pó ninho integral 380g.jpg"  height="40px" width="40px">
-                    <span class="item_lista">Leite em pó Ninho Integral</span>
+                    <span>Leite em pó Ninho Integral</span>
                   </a>
                   
                 </li>
-                <li>
+                <li class = "item_lista">
                   <a href="#">
-                    <img src="fotos/cereal matinal crunch.webp" height="40px" width="40px">
-                    <span class="item_lista">Cereal Matinal Crunch</span>
+                    <img src="fotos/cereal matinal crunch 230g.webp" height="40px" width="40px">
+                    <span>Cereal Matinal Crunch</span>
                   </a>
                   
                 </li>
-                <li>
+                <li class = "item_lista">
                   <a href="#">
-                    <img src="fotos/cereal matinal nescau.png" height="40px" width="40px">
-                    <span class="item_lista">Cereal Matinal Nescau</span>
+                    <img src="fotos/Cereal-Matinal-Nescau-Caixa-210g.png" height="40px" width="40px">
+                    <span>Cereal Matinal Nescau</span>
                   </a>
                   
                 </li>
-                <li>
+                <li class = "item_lista">
                   <a href="#">
-                    <img src="fotos/leite integral italac.webp" height="40px" width="40px">
-                    <span class="item_lista">Leite Integral Italac</span>
+                    <img src="fotos/leite integral italac.jpg" height="40px" width="40px">
+                    <span>Leite Integral Italac</span>
                   </a>
                   
                 </li>
-                <li>
+                <li class = "item_lista">
                   <a href="#">
-                    <img src="fotos/nata santa clara.png" height="40px" width="40px">
-                    <span class="item_lista">Nata Santa Clara</span>
+                    <img src="fotos/nata santa clara 300g.jpeg" height="40px" width="40px">
+                    <span>Nata Santa Clara</span>
                   </a>
                   
                 </li>
-                <li>
+                <li class = "item_lista">
                   <a href="#">
-                    <img src="fotos/manteiga president.webp" height="40px" width="40px">
-                    <span class="item_lista">Manteiga Extra com Sal President</span>
+                    <img src="fotos/manteiga extra com sal President Gastronomique 380g.webp" height="40px" width="40px">
+                    <span>Manteiga Extra com Sal President</span>
                   </a>
                 </li>
-                <li>
+                <li class = "item_lista">
                   <a href="#">
-                    <img src="fotos/torrada tradicional bauducco.jpg" height="40px" width="40px">
-                    <span class="item_lista">Torrada Tradicional Bauducco</span>
+                    <img src="fotos/torrada tradicional bauducco 142g.webp" height="40px" width="40px">
+                    <span>Torrada Tradicional Bauducco</span>
                   </a>
                   
                 </li>
@@ -124,7 +125,7 @@
                 
                
                 <a href="nota_fiscal.html"><button onclick="finalizarCompra()" id="finalizarCompra">Finalizar Compra</a></button>
-                
+                <button id="remover" onclick="remover()">Remover<span class="texto"></span> <span class="texto"></span></button>
         </div>
       </div>
       </div>
@@ -185,7 +186,7 @@
             </div>
 
           <div class="caixa_texto">
-            <img src="fotos/AchocolatadoemPo370gNescau1.webp" width="90%" height="150">
+            <img src="fotos/Achocolatado-em-Po-2.0-370g-Nescau-105744.png" width="90%" height="150">
             <br>
             <p id="produto-5">Achocolatado em Pó Nescau 370g</p>
             <span id="preco-produto-5">R$ 10,90</span>
@@ -209,7 +210,7 @@
             </div>
 
           <div class="caixa_texto">
-            <img src="fotos/cereal matinal crunch.webp" width="100%" height="150">
+            <img src="fotos/cereal matinal crunch 230g.webp" width="100%" height="150">
             <br>
             <p id="produto-7">Cereal Matinal Crunch 230g</p>
             <span id="preco-produto-7">R$ 8,90</span>
@@ -221,7 +222,7 @@
             </div>
 
           <div class="caixa_texto">
-            <img src="fotos/cereal matinal nescau.png" width="100%" height="150">
+            <img src="fotos/Cereal-Matinal-Nescau-Caixa-210g.png" width="100%" height="150">
             <br>
             <p id="produto-8">Cereal Matinal Nescau 210g</p>
             <span id="preco-produto-8">R$ 7,00</span>
@@ -233,7 +234,7 @@
             </div>
 
           <div class="caixa_texto">
-            <img src="fotos/leite integral italac.webp" width="90%" height="150">
+            <img src="fotos/leite integral italac.jpg" width="90%" height="150">
             <br>
             <p id="produto-9">Leite Integral Italac 1L</p>
             <span id="preco-produto-9">R$ 2,50</span>
@@ -245,7 +246,7 @@
             </div>
 
           <div class="caixa_texto">
-            <img src="fotos/nata santa clara.png" width="100%" height="150">
+            <img src="fotos/nata santa clara 300g.jpeg" width="100%" height="150">
             <br>
             <p id="produto-10">Nata Santa Clara 300g</p>
             <span id="preco-produto-10">R$ 9,00</span>
@@ -257,7 +258,7 @@
             </div>
 
           <div class="caixa_texto">
-            <img src="fotos/manteiga president.webp" width="100%" height="150">
+            <img src="fotos/manteiga extra com sal President Gastronomique 380g.webp" width="100%" height="150">
             <br>
             <p id="produto-11">Manteiga Extra com Sal President Gastronomique 380g</p>
             <span id="preco-produto-11">R$ 14,00</span>
@@ -269,7 +270,7 @@
             </div>
 
           <div class="caixa_texto">
-            <img src="fotos/torrada tradicional bauducco.jpg" width="100%" height="180">
+            <img src="fotos/torrada tradicional bauducco 142g.webp" width="100%" height="180">
             <br>
             <p id="produto-12">Torrada Tradicional Bauducco 142g</p>
             <span id="preco-produto-12">R$ 5,00</span>

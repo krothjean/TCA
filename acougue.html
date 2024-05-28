@@ -9,71 +9,73 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
-
+<style>
+  
+</style>
 <body>
     <header>
     <div class="cabecalho ">
         <img class="esquilo" src="fotos/imagem zaffari.png" alt="Imagem 1">
         <h1 class="titulo">Açougue</h1>
         <div class="barra_pesquisa">    
-          <input onkeyup="searchItems()" type="text" placeholder="Do que precisa?" id="procura_padaria">
-          
+          <input onkeyup="searchItems()" type="text" placeholder="Do que precisa?" id="procura">
+          <button onclick="apagarProduto()" id="apagarProduto">x</button>
                <ul id="lista_produtos">
-                <li>
+                <li class = "item_lista">
                 <a href="#">
                 <img src="fotos/sobrecoxa de frango congelada.webp" height="40px" width="40px">
-                <span class="item_lista"> Sobrecoxa de frango congelada Lar</span>
+                <span> Sobrecoxa de frango congelada Lar</span>
                 </a>
                </li>
 
-                <li>
+                <li class = "item_lista">
                <a href="#">
                <img src="fotos/coracao de frango congelado frangosul 1kg.webp" height="40px" width="40px">
-               <span class="item_lista">Coração de Frango Congelado Frangosul</span>
+               <span>Coração de Frango Congelado Frangosul</span>
                 </a> 
               </li>
 
-                <li>
+                <li class = "item_lista">
               <a href="#">
                 <img src="fotos/bife de coxão mole.webp" height="40px" width="40px">
-                <span class="item_lista">Bife de Coxão Mole Resfriado</span>
+                <span>Bife de Coxão Mole Resfriado</span>
 
                 </a> 
               </li>
 
-                <li>
+                <li class = "item_lista">
                <a href="#">
                 <img src="fotos/alcatra bovina.webp" height="40px" width="40px">
-                <span class="item_lista"> Alcatra Bovina</span>
+                <span> Alcatra Bovina</span>
               </a> 
               </li>
 
-                <li>
+                <li class = "item_lista">
                 <a href="#">
                   <img src="fotos/cane moida de acem bovino.webp" height="40px" width="40px">
-                  <span class="item_lista">Carne Moída de Acém Bovino</span>
+                  <span>Carne Moída de Acém Bovino</span>
 
                 </a> 
                </li>
 
-                <li>
+                <li class = "item_lista">
                 <a href="#">
                  <img src="fotos/entrecot suino resfriado.webp" height="40px" width="40px">
-                 <span class="item_lista">Entrecot Suíno Resfriado</span>
+                 <span>Entrecot Suíno Resfriado</span>
                 </a> 
               </li>
 
-                <li>
+                <li class = "item_lista">
                 <a href="#">
                  <img src="fotos/filezinho de frango sassami.webp" height="40px" width="40px">
-                 <span class="item_lista">Filezinho de Frango Sassami Congelado</span>
+                 <span>Filezinho de Frango Sassami Congelado</span>
                 </a> 
               </li>
 
-                <li>
+                <li class = "item_lista">
                 <a href="#">
                   <img src="fotos/filé de tilapia.webp" height="40px" width="40px">
-                  <span class="item_lista">Filé de Tilapia Congelado</span>
+                  <spa">Filé de Tilapia Congelado</span>
 
                 </a> 
               </li>
@@ -92,7 +94,7 @@
           <section class="carrinho-compra">
             <section class="produtos-carrinho" id="lista-de-produtos">
             <section class="carrinho__produto__produtos">
-              <span class="texto"></span> <span class="texto"></span>
+              <span class="texto" id="quantidade"></span> <span class="texto"></span>
              
              
             </section>
@@ -103,12 +105,9 @@
               </p>
               
              
-              <a href="nota_fiscal.html"><button onclick="finalizarCompra()" id="finalizarCompra">Finalizar Compra</a></button>
+              <button onclick="finalizarCompra()" id="finalizarCompra">Finalizar Compra</button>
               <button id="remover" onclick="remover()">Remover<span class="texto"></span> <span class="texto"></span></button>
-              
-        
-       
-        
+            
           </div>
           
         </div>
@@ -216,6 +215,7 @@
               <input type="text" id="quantidade-produto-20" class="input_quantidade" value="0">
               <button onclick="aumentarQuantidade('produto-20')" class="button_plus">+</button>
             </div>
+          </div>
             
 </body>
 <script>

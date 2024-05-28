@@ -48,11 +48,12 @@ padding: 10px;
   display: none;
 padding: 0px;
 list-style-type: none;
+position: absolute;
 }
 #lista_produtos a{
   display: flex;
   align-items: center;
-  
+ 
 }
 #lista_produtos a:hover{
   background-color: rgb(197, 187, 187);
@@ -63,6 +64,7 @@ li{
   background: #fcfcfc;
   width: 400px;
   align-items: center;
+  
   }
   #cartButton {
     position: fixed;
@@ -73,6 +75,16 @@ li{
     cursor: pointer;
     
 }
+#apagarProduto{
+  height: 30px;
+  width: 40px; 
+ }
+ #apagarProduto:hover{
+  background-color: rgb(209, 211, 212);
+  color: #801717;
+  border: none;
+  transition: 0.2s;
+ }
 
 
 .side-menu {
@@ -204,6 +216,7 @@ li{
   margin-left: 0px;
   border-radius: 5px;
   margin-top: 20px;
+
 }
 .button_banana ,#finalizarCompra:hover{
   background-color: rgb(16, 78, 16);
