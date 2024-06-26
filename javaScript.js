@@ -1,8 +1,31 @@
 
     
+
 function diminuirQuantidade(id) {
   let quantidadeInput = document.getElementById('quantidade-' + id);
 
+
+      if (itemDigitado === '') {
+        alert('Por favor, digite o nome do produto.');
+        return;
+      }
+    
+      let listaProdutos = document.querySelectorAll('li .item_lista');
+    
+      listaProdutos.forEach((item) => {
+        let nomeProduto = item.querySelector('li').textContent.trim().toLowerCase();
+        if (nomeProduto === itemDigitado) {
+          item.remove();
+          itemEncontrado = true;
+        }
+      });
+    
+      barra.value = '';
+    }
+function diminuirQuantidade(ProdutoId) {
+  
+  let quantidadeInput = document.getElementById('quantidade-' +ProdutoId);
+ 
   let quantidade = parseInt(quantidadeInput.value);
 
   quantidade = Math.max(quantidade - 1, 0);
@@ -11,11 +34,12 @@ function diminuirQuantidade(id) {
   
 }
 function aumentarQuantidade(produtoId) {
+
   let quantidadeDigitada = document.getElementById('quantidade-' + produtoId)
   let quantidade = parseInt(quantidadeDigitada.value)
   quantidade++
   quantidadeDigitada.value = quantidade
-  
+
 }
 
 let totalGeral = 0;
@@ -61,8 +85,6 @@ function Adicionar2(id){
   
 }
 function remover(){
-   
- 
 let lista_produtos = document.getElementById('lista-de-produtos');
 lista_produtos.innerHTML= "";
 
@@ -119,12 +141,12 @@ function Search(){
 
 function searchItems() {
 
+
 let input = document.getElementById('procura');
 let filter = input.value.toUpperCase();
 
 
 let items = document.querySelectorAll('.item_lista');
-
 
 items.forEach(function(item) {
     
@@ -135,7 +157,10 @@ items.forEach(function(item) {
        
  
     } else {
+
         
+       
+
         item.style.display = 'none';
         
     }
@@ -144,18 +169,27 @@ items.forEach(function(item) {
 }
 
 document.addEventListener('click', function(event) {
+
  
      if (!event.target.closest('#procura')) {
  
      document.getElementById('lista_produtos').style.display = 'none';
      } else {
 
+
+
+     if (!event.target.closest('#procura')) {
+
+     document.getElementById('lista_produtos').style.display = 'none';
+     } else {
+ 
+
      document.getElementById('lista_produtos').style.display = 'block';
      }
      
     }
     
-    )
+    })
   
   function apagarProduto() {
     let barra = document.getElementById('procura');
@@ -178,3 +212,14 @@ document.addEventListener('click', function(event) {
   
     barra.value = '';
   }           
+  document.addEventListener('keydown', function(event){
+    let lista = document.querySelector('li')
+     
+    lista.forEach(function(item){
+       item.style.background = 'green'
+    })
+    
+     
+    
+   
+  })
