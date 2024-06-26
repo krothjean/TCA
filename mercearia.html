@@ -16,6 +16,7 @@
     <div class="cabecalho ">
         <img class="esquilo" src="fotos/imagem zaffari.png" alt="Imagem 1">
         <h1 class="titulo">Mercearia</h1>
+       
         <div class="barra_pesquisa">
         <input onkeyup="searchItems()" type="text" placeholder="Do que precisa?" id="procura">
         <button onclick="apagarProduto()" id="apagarProduto">x</button>
@@ -78,7 +79,7 @@
       <div id="sideMenu" class="side-menu">
         <button onclick="fecharMenu()" id="fecharMenu"><i class="bi bi-x-lg"></i></button>
 
-          <!-- Conteúdo do menu lateral -->
+          
           <h2>Seu Carrinho</h2>
          
           <section class="carrinho-compra">
@@ -93,7 +94,7 @@
               </section>
         
               <p class="precoTotal">
-                Total: <span class="texto" id="PrecoTotal"></span>
+                <strong>Total: </strong><span class="texto" id="PrecoTotal"></span>
               </p>
               
             
