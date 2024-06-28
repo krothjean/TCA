@@ -80,21 +80,19 @@ function expandirCarrinho(){
  } else {
    menuLateral.style.width = '350px'
  }
-  
-
      } 
-                  
+
+
 function fecharMenu(){
 let menuLateral = document.getElementById('menuLateral')
 menuLateral.style.width = '0'   
 } 
+
 function finalizarCompra(){
-  
-  let quantidade = document.getElementById('lista-de-produtos')
-  quantidade.innerHTML = 
-  window.location = 'nota_fiscal.html' 
-  
+  let listaProdutos = document.getElementById('lista-de-produtos')
+  window.location = 'nota_fiscal.html'  
 }   
+
 function Search(){
   let input = document.getElementById('procura').value
   input = input.toLowerCase()
@@ -110,12 +108,6 @@ function Search(){
   }
 
 }
-
-
-  const barraDePesquisa = document.querySelector("#procura")
-  const lista = document.querySelector("lista_produtos");
-  const itens = document.querySelectorAll("item_lista");
-
 
 function searchItems() {
 

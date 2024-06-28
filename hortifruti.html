@@ -18,6 +18,7 @@
         <div class="barra_pesquisa">   
           <input onkeyup="searchItems()" type="text" placeholder="Do que precisa?" id="procura">
           <button onclick="apagarProduto()" id="apagarProduto">x</button>
+
         <ul id="lista_produtos">
           <li class = "item_lista">
             <a href="#">
@@ -73,7 +74,8 @@
         <button onclick="expandirCarrinho()" id="cartButton">
           <img id="carrinho" src="fotos/carrinho de compras.png" alt="Carrinho">
       </button>
-      <div id="sideMenu" class="side-menu">
+
+      <div id="menuLateral" class="menuLateral">
         <button onclick="fecharMenu()" id="fecharMenu"><i class="bi bi-x-lg"></i></button>
 
           <!-- Conteúdo do menu lateral -->
@@ -86,8 +88,9 @@
              
              
             </section>
-            </section>
-              </section>
+            </section> 
+          </section>
+          
               <p class="precoTotal">
                 Total: <span class="texto" id="PrecoTotal"></span>
               </p>
@@ -95,7 +98,7 @@
               <button id="remover" onclick="remover()">Remover<span class="texto"></span> <span class="texto"></span></button>
 
               
-            </div>
+      </div>
           </div>
     </div>
         </header>  
