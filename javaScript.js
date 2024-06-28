@@ -1,34 +1,11 @@
 
-    
-
-function diminuirQuantidade(id) {
-  let quantidadeInput = document.getElementById('quantidade-' + id);
-
-
-      if (itemDigitado === '') {
-        alert('Por favor, digite o nome do produto.');
-        return;
-      }
-    
-      let listaProdutos = document.querySelectorAll('li .item_lista');
-    
-      listaProdutos.forEach((item) => {
-        let nomeProduto = item.querySelector('li').textContent.trim().toLowerCase();
-        if (nomeProduto === itemDigitado) {
-          item.remove();
-          itemEncontrado = true;
-        }
-      });
-    
-      barra.value = '';
-    }
 function diminuirQuantidade(ProdutoId) {
   
   let quantidadeInput = document.getElementById('quantidade-' +ProdutoId);
  
   let quantidade = parseInt(quantidadeInput.value);
 
-  quantidade = Math.max(quantidade - 1, 0);
+  quantidade = quantidade - 1, 0;
 
   quantidadeInput.value = quantidade;
   
@@ -96,7 +73,7 @@ totalCompra.innerHTML = "";
 
 function expandirCarrinho(){
  
- let menuLateral = document.getElementById('sideMenu')
+ let menuLateral = document.getElementById('menuLateral')
 
  if(menuLateral === '350px') {
    menuLateral.style.width = '0'
@@ -108,26 +85,27 @@ function expandirCarrinho(){
      } 
                   
 function fecharMenu(){
-let menuLateral = document.getElementById('sideMenu')
+let menuLateral = document.getElementById('menuLateral')
 menuLateral.style.width = '0'   
-} let
+} 
 function finalizarCompra(){
-  window.location = 'nota_fiscal.html'
+  
   let quantidade = document.getElementById('lista-de-produtos')
   quantidade.innerHTML = 
-  console.log(quantidade)
+  window.location = 'nota_fiscal.html' 
   
 }   
 function Search(){
   let input = document.getElementById('procura').value
   input = input.toLowerCase()
-  let x = document.getElementsByClassName('item_lista')
+  let itens = document.getElementsByClassName('item_lista')
   
-  for(i = 0; i < x.length; i++){
-      if(!x[i].innerHTML.toLowerCase().includes(input)){
-          x[i].style.display  = "none"
+  for(i = 0; i < itens.length; i++){
+    
+      if(!itens[i].innerHTML.toLowerCase().includes(input)){
+          itens[i].style.display  = "none"
       }else{
-          x[i].style.display = "block"
+          itens[i].style.display = "block"
       }
   }
 
@@ -143,24 +121,19 @@ function searchItems() {
 
 
 let input = document.getElementById('procura');
-let filter = input.value.toUpperCase();
+let filtro = input.value.toUpperCase();
 
 
 let items = document.querySelectorAll('.item_lista');
 
 items.forEach(function(item) {
     
-    if (item.innerHTML.toUpperCase().indexOf(filter) > -1) {
+    if (item.innerHTML.toUpperCase().indexOf(filtro) > -1) {
         
         item.style.display = 'block';
         document.querySelector('ul').style.display = 'block'
        
- 
     } else {
-
-        
-       
-
         item.style.display = 'none';
         
     }
@@ -169,27 +142,13 @@ items.forEach(function(item) {
 }
 
 document.addEventListener('click', function(event) {
-
- 
      if (!event.target.closest('#procura')) {
- 
      document.getElementById('lista_produtos').style.display = 'none';
      } else {
-
-
-
-     if (!event.target.closest('#procura')) {
-
-     document.getElementById('lista_produtos').style.display = 'none';
-     } else {
- 
-
      document.getElementById('lista_produtos').style.display = 'block';
-     }
-     
+     } 
     }
-    
-    })
+    )
   
   function apagarProduto() {
     let barra = document.getElementById('procura');
@@ -205,21 +164,10 @@ document.addEventListener('click', function(event) {
     listaProdutos.forEach((item) => {
       let nomeProduto = item.querySelector('li').textContent.trim().toLowerCase();
       if (nomeProduto === itemDigitado) {
-        item.remove();
-        itemEncontrado = true;
+       
       }
     });
   
     barra.value = '';
   }           
-  document.addEventListener('keydown', function(event){
-    let lista = document.querySelector('li')
-     
-    lista.forEach(function(item){
-       item.style.background = 'green'
-    })
-    
-     
-    
-   
-  })
+  

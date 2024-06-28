@@ -97,7 +97,7 @@ li{
  }
 
 
-.side-menu {
+.menuLateral {
   height: 100%;
   width: 0;
   position: fixed;
@@ -110,21 +110,17 @@ li{
   color: rgb(49, 39, 39);
 }
 
-.side-menu h2 {
+.menuLateral h2 {
   padding: 10px;
 }
 
-/*.side-menu ul {
-  list-style-type: none;
-  padding: 10px;
-  
-}*/
+
 #lista-de-produtos{
   margin-left: 10px;
   
 }
 
-.side-menu ul li {
+.menuLateral ul li {
   padding: 10px 15px;
   text-decoration: none;
   font-size: 25px;
@@ -134,7 +130,7 @@ li{
   
 }
 
-.side-menu ul li:hover {
+.menuLateral ul li:hover {
   background-color: #575757;
 }
 #fecharMenu{
